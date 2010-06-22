@@ -1,0 +1,433 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:s="http://jboss.com/products/seam/taglib"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:rich="http://richfaces.org/rich"
+    template="layout/template.xhtml">
+
+<ui:define name="body">
+
+    <rich:panel>
+        <f:facet name="header">Employee Details</f:facet>
+
+        <s:decorate id="eid" template="layout/display.xhtml">
+            <ui:define name="label">Eid</ui:define>
+            <h:outputText value="#{employeeHome.instance.eid}"/>
+        </s:decorate>
+
+        <s:decorate id="userName" template="layout/display.xhtml">
+            <ui:define name="label">User name</ui:define>
+            <h:outputText value="#{employeeHome.instance.userName}"/>
+        </s:decorate>
+
+        <s:decorate id="name" template="layout/display.xhtml">
+            <ui:define name="label">Name</ui:define>
+            <h:outputText value="#{employeeHome.instance.name}"/>
+        </s:decorate>
+
+        <s:decorate id="jobDesc" template="layout/display.xhtml">
+            <ui:define name="label">Job desc</ui:define>
+            <h:outputText value="#{employeeHome.instance.jobDesc}"/>
+        </s:decorate>
+
+        <s:decorate id="lname" template="layout/display.xhtml">
+            <ui:define name="label">Lname</ui:define>
+            <h:outputText value="#{employeeHome.instance.lname}"/>
+        </s:decorate>
+
+        <s:decorate id="bdate" template="layout/display.xhtml">
+            <ui:define name="label">Bdate</ui:define>
+            <h:outputText value="#{employeeHome.instance.bdate}">
+                <s:convertDateTime type="date" dateStyle="short"/>
+            </h:outputText>
+        </s:decorate>
+
+        <s:decorate id="address" template="layout/display.xhtml">
+            <ui:define name="label">Address</ui:define>
+            <h:outputText value="#{employeeHome.instance.address}"/>
+        </s:decorate>
+
+        <s:decorate id="email" template="layout/display.xhtml">
+            <ui:define name="label">Email</ui:define>
+            <h:outputText value="#{employeeHome.instance.email}"/>
+        </s:decorate>
+
+        <s:decorate id="phoneNum" template="layout/display.xhtml">
+            <ui:define name="label">Phone num</ui:define>
+            <h:outputText value="#{employeeHome.instance.phoneNum}"/>
+        </s:decorate>
+
+        <s:decorate id="auth" template="layout/display.xhtml">
+            <ui:define name="label">Auth</ui:define>
+            <h:outputText value="#{employeeHome.instance.auth}"/>
+        </s:decorate>
+
+        <s:decorate id="password" template="layout/display.xhtml">
+            <ui:define name="label">Password</ui:define>
+            <h:outputText value="#{employeeHome.instance.password}"/>
+        </s:decorate>
+
+        <div style="clear:both"/>
+
+    </rich:panel>
+
+    <div class="actionButtons">
+
+        <s:button view="/EmployeeEdit.xhtml"
+                    id="edit"
+                 value="Edit"/>
+
+        <s:button view="/#{empty employeeFrom ? 'EmployeeList' : employeeFrom}.xhtml"
+                    id="done"
+                 value="Done"/>
+
+    </div>
+
+    <rich:tabPanel switchType="ajax">
+
+    <rich:tab>
+        <f:facet name="label">
+            <h:panelGroup><h:graphicImage value="/img/onetomany.gif" style="vertical-align: middle; padding-right: 4px;"/>Taskses</h:panelGroup>
+        </f:facet>
+    <h:form styleClass="association" id="tasksesChildren">
+
+        <h:outputText value="There are no taskses associated with this employee."
+                   rendered="#{empty employeeHome.taskses}"/>
+
+        <rich:dataTable value="#{employeeHome.taskses}"
+                       var="_tasks"
+                  rendered="#{not empty employeeHome.taskses}"
+                rowClasses="rvgRowOne,rvgRowTwo"
+                        id="tasksesTable">
+            <rich:column sortBy="#{_tasks.tid}">
+                <f:facet name="header">Tid</f:facet>
+                <h:outputText value="#{_tasks.tid}"/>
+            </rich:column>
+            <rich:column sortBy="#{_tasks.cdate}">
+                <f:facet name="header">Cdate</f:facet>
+                <h:outputText value="#{_tasks.cdate}">
+                    <s:convertDateTime type="both" dateStyle="short"/>
+                </h:outputText>
+            </rich:column>
+            <rich:column sortBy="#{_tasks.edate}">
+                <f:facet name="header">Edate</f:facet>
+                <h:outputText value="#{_tasks.edate}">
+                    <s:convertDateTime type="both" dateStyle="short"/>
+                </h:outputText>
+            </rich:column>
+            <rich:column sortBy="#{_tasks.finishedDate}">
+                <f:facet name="header">Finished date</f:facet>
+                <h:outputText value="#{_tasks.finishedDate}">
+                    <s:convertDateTime type="both" dateStyle="short"/>
+                </h:outputText>
+            </rich:column>
+            <rich:column sortBy="#{_tasks.title}">
+                <f:facet name="header">Title</f:facet>
+                <h:outputText value="#{_tasks.title}"/>
+            </rich:column>
+            <rich:column sortBy="#{_tasks.description}">
+                <f:facet name="header">Description</f:facet>
+                <h:outputText value="#{_tasks.description}"/>
+            </rich:column>
+            <rich:column sortBy="#{_tasks.attachment}">
+                <f:facet name="header">Attachment</f:facet>
+                <h:outputText value="#{_tasks.attachment}"/>
+            </rich:column>
+            <rich:column sortBy="#{_tasks.status}">
+                <f:facet name="header">Status</f:facet>
+                <h:outputText value="#{_tasks.status}"/>
+            </rich:column>
+            <rich:column sortBy="#{_tasks.flagged}">
+                <f:facet name="header">Flagged</f:facet>
+                <h:outputText value="#{_tasks.flagged}"/>
+            </rich:column>
+            <rich:column sortBy="#{_tasks.delegated}">
+                <f:facet name="header">Delegated</f:facet>
+                <h:outputText value="#{_tasks.delegated}"/>
+            </rich:column>
+            <h:column>
+                <f:facet name="header">Action</f:facet>
+                <s:link id="selecttasks"
+                     value="Select"
+                      view="/Tasks.xhtml">
+                    <f:param name="tasksTid"
+                            value="#{_tasks.tid}"/>
+                    <f:param name="tasksFrom" value="Employee"/>
+                </s:link>
+            </h:column>
+        </rich:dataTable>
+
+    </h:form>
+
+    <div class="actionButtons">
+        <s:button
+               value="Add tasks"
+                view="/TasksEdit.xhtml">
+            <f:param name="employeeEid"
+                    value="#{employeeHome.instance.eid}"/>
+            <f:param name="tasksFrom" value="Employee"/>
+        </s:button>
+    </div>
+    </rich:tab>
+
+    <rich:tab>
+        <f:facet name="label">
+            <h:panelGroup><h:graphicImage value="/img/manytoone.gif" style="vertical-align: middle; padding-right: 4px;"/>Late</h:panelGroup>
+        </f:facet>
+    <div class="association" id="lateParent">
+
+        <h:outputText value="There is no late associated with this employee."
+                   rendered="#{employeeHome.instance.late == null}"/>
+
+        <rich:dataTable var="_late"
+                   value="#{employeeHome.instance.late}"
+                rendered="#{employeeHome.instance.late != null}"
+              rowClasses="rvgRowOne,rvgRowTwo"
+                      id="lateTable">
+            <h:column>
+                <f:facet name="header">Eid</f:facet>
+                <h:outputText value="#{_late.eid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Employee eid</f:facet>
+                <h:outputText value="#{_late.employee.eid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Counter</f:facet>
+                <h:outputText value="#{_late.counter}"/>
+            </h:column>
+            <h:column styleClass="action">
+                <f:facet name="header">Action</f:facet>
+                <s:link id="viewlate"
+                     value="View"
+                      view="/Late.xhtml">
+                    <f:param name="lateEid"
+                           value="#{_late.eid}"/>
+                </s:link>
+            </h:column>
+        </rich:dataTable>
+
+    </div>
+    </rich:tab>
+
+    <rich:tab>
+        <f:facet name="label">
+            <h:panelGroup><h:graphicImage value="/img/manytoone.gif" style="vertical-align: middle; padding-right: 4px;"/>On time</h:panelGroup>
+        </f:facet>
+    <div class="association" id="onTimeParent">
+
+        <h:outputText value="There is no onTime associated with this employee."
+                   rendered="#{employeeHome.instance.onTime == null}"/>
+
+        <rich:dataTable var="_onTime"
+                   value="#{employeeHome.instance.onTime}"
+                rendered="#{employeeHome.instance.onTime != null}"
+              rowClasses="rvgRowOne,rvgRowTwo"
+                      id="onTimeTable">
+            <h:column>
+                <f:facet name="header">Eid</f:facet>
+                <h:outputText value="#{_onTime.eid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Employee eid</f:facet>
+                <h:outputText value="#{_onTime.employee.eid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Counter</f:facet>
+                <h:outputText value="#{_onTime.counter}"/>
+            </h:column>
+            <h:column styleClass="action">
+                <f:facet name="header">Action</f:facet>
+                <s:link id="viewonTime"
+                     value="View"
+                      view="/OnTime.xhtml">
+                    <f:param name="onTimeEid"
+                           value="#{_onTime.eid}"/>
+                </s:link>
+            </h:column>
+        </rich:dataTable>
+
+    </div>
+    </rich:tab>
+
+    <rich:tab>
+        <f:facet name="label">
+            <h:panelGroup><h:graphicImage value="/img/onetomany.gif" style="vertical-align: middle; padding-right: 4px;"/>Archiveds</h:panelGroup>
+        </f:facet>
+    <h:form styleClass="association" id="archivedsChildren">
+
+        <h:outputText value="There are no archiveds associated with this employee."
+                   rendered="#{empty employeeHome.archiveds}"/>
+
+        <rich:dataTable value="#{employeeHome.archiveds}"
+                       var="_archived"
+                  rendered="#{not empty employeeHome.archiveds}"
+                rowClasses="rvgRowOne,rvgRowTwo"
+                        id="archivedsTable">
+            <rich:column sortBy="#{_archived.tid}">
+                <f:facet name="header">Tid</f:facet>
+                <h:outputText value="#{_archived.tid}"/>
+            </rich:column>
+            <rich:column sortBy="#{_archived.cdate}">
+                <f:facet name="header">Cdate</f:facet>
+                <h:outputText value="#{_archived.cdate}">
+                    <s:convertDateTime type="both" dateStyle="short"/>
+                </h:outputText>
+            </rich:column>
+            <rich:column sortBy="#{_archived.edate}">
+                <f:facet name="header">Edate</f:facet>
+                <h:outputText value="#{_archived.edate}">
+                    <s:convertDateTime type="both" dateStyle="short"/>
+                </h:outputText>
+            </rich:column>
+            <rich:column sortBy="#{_archived.title}">
+                <f:facet name="header">Title</f:facet>
+                <h:outputText value="#{_archived.title}"/>
+            </rich:column>
+            <rich:column sortBy="#{_archived.description}">
+                <f:facet name="header">Description</f:facet>
+                <h:outputText value="#{_archived.description}"/>
+            </rich:column>
+            <rich:column sortBy="#{_archived.attachment}">
+                <f:facet name="header">Attachment</f:facet>
+                <h:outputText value="#{_archived.attachment}"/>
+            </rich:column>
+            <rich:column sortBy="#{_archived.status}">
+                <f:facet name="header">Status</f:facet>
+                <h:outputText value="#{_archived.status}"/>
+            </rich:column>
+            <rich:column sortBy="#{_archived.parallel}">
+                <f:facet name="header">Parallel</f:facet>
+                <h:outputText value="#{_archived.parallel}"/>
+            </rich:column>
+            <h:column>
+                <f:facet name="header">Action</f:facet>
+                <s:link id="selectarchived"
+                     value="Select"
+                      view="/Archived.xhtml">
+                    <f:param name="archivedTid"
+                            value="#{_archived.tid}"/>
+                    <f:param name="archivedFrom" value="Employee"/>
+                </s:link>
+            </h:column>
+        </rich:dataTable>
+
+    </h:form>
+
+    <div class="actionButtons">
+        <s:button
+               value="Add archived"
+                view="/ArchivedEdit.xhtml">
+            <f:param name="employeeEid"
+                    value="#{employeeHome.instance.eid}"/>
+            <f:param name="archivedFrom" value="Employee"/>
+        </s:button>
+    </div>
+    </rich:tab>
+
+    <rich:tab>
+        <f:facet name="label">
+            <h:panelGroup><h:graphicImage value="/img/onetomany.gif" style="vertical-align: middle; padding-right: 4px;"/>Divisionses_1</h:panelGroup>
+        </f:facet>
+    <h:form styleClass="association" id="divisionses_1Children">
+
+        <h:outputText value="There are no divisionses_1 associated with this employee."
+                   rendered="#{empty employeeHome.divisionses_1}"/>
+
+        <rich:dataTable value="#{employeeHome.divisionses_1}"
+                       var="_divisions"
+                  rendered="#{not empty employeeHome.divisionses_1}"
+                rowClasses="rvgRowOne,rvgRowTwo"
+                        id="divisionses_1Table">
+            <rich:column sortBy="#{_divisions.divId}">
+                <f:facet name="header">Div id</f:facet>
+                <h:outputText value="#{_divisions.divId}"/>
+            </rich:column>
+            <rich:column sortBy="#{_divisions.name}">
+                <f:facet name="header">Name</f:facet>
+                <h:outputText value="#{_divisions.name}"/>
+            </rich:column>
+            <h:column>
+                <f:facet name="header">Action</f:facet>
+                <s:link id="selectdivisions"
+                     value="Select"
+                      view="/Divisions.xhtml">
+                    <f:param name="divisionsDivId"
+                            value="#{_divisions.divId}"/>
+                    <f:param name="divisionsFrom" value="Employee"/>
+                </s:link>
+            </h:column>
+        </rich:dataTable>
+
+    </h:form>
+
+    <div class="actionButtons">
+        <s:button
+               value="Add divisions"
+                view="/DivisionsEdit.xhtml">
+            <f:param name="employeeEid"
+                    value="#{employeeHome.instance.eid}"/>
+            <f:param name="divisionsFrom" value="Employee"/>
+        </s:button>
+    </div>
+    </rich:tab>
+
+    <rich:tab>
+        <f:facet name="label">
+            <h:panelGroup><h:graphicImage value="/img/onetomany.gif" style="vertical-align: middle; padding-right: 4px;"/>Done bies</h:panelGroup>
+        </f:facet>
+    <h:form styleClass="association" id="doneBiesChildren">
+
+        <h:outputText value="There are no doneBies associated with this employee."
+                   rendered="#{empty employeeHome.doneBies}"/>
+
+        <rich:dataTable value="#{employeeHome.doneBies}"
+                       var="_doneBy"
+                  rendered="#{not empty employeeHome.doneBies}"
+                rowClasses="rvgRowOne,rvgRowTwo"
+                        id="doneBiesTable">
+            <rich:column sortBy="#{_doneBy.id.tid}">
+                <f:facet name="header">Tid</f:facet>
+                <h:outputText value="#{_doneBy.id.tid}"/>
+            </rich:column>
+            <rich:column sortBy="#{_doneBy.id.eid}">
+                <f:facet name="header">Eid</f:facet>
+                <h:outputText value="#{_doneBy.id.eid}"/>
+            </rich:column>
+            <rich:column sortBy="#{_doneBy.changed}">
+                <f:facet name="header">Changed</f:facet>
+                <h:outputText value="#{_doneBy.changed}"/>
+            </rich:column>
+            <h:column>
+                <f:facet name="header">Action</f:facet>
+                <s:link id="selectdoneBy"
+                     value="Select"
+                      view="/DoneBy.xhtml">
+                    <f:param name="doneByTid"
+                            value="#{_doneBy.id.tid}"/>
+                    <f:param name="doneByEid"
+                            value="#{_doneBy.id.eid}"/>
+                    <f:param name="doneByFrom" value="Employee"/>
+                </s:link>
+            </h:column>
+        </rich:dataTable>
+
+    </h:form>
+
+    <div class="actionButtons">
+        <s:button
+               value="Add doneBy"
+                view="/DoneByEdit.xhtml">
+            <f:param name="employeeEid"
+                    value="#{employeeHome.instance.eid}"/>
+            <f:param name="doneByFrom" value="Employee"/>
+        </s:button>
+    </div>
+    </rich:tab>
+</rich:tabPanel>
+</ui:define>
+
+</ui:composition>

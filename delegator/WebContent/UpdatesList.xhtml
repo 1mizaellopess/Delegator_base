@@ -1,0 +1,165 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:s="http://jboss.com/products/seam/taglib"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:rich="http://richfaces.org/rich"
+    template="layout/template.xhtml">
+
+<ui:define name="body">
+
+    <h:form id="updatesSearch" styleClass="edit">
+
+        <rich:simpleTogglePanel label="Updates Search Filter" switchType="ajax">
+
+            <s:decorate template="layout/display.xhtml">
+                <ui:define name="label">Updates</ui:define>
+                <h:inputText id="updates" value="#{updatesList.updates.updates}"/>
+            </s:decorate>
+
+
+        </rich:simpleTogglePanel>
+
+        <div class="actionButtons">
+            <h:commandButton id="search" value="Search" action="/UpdatesList.xhtml"/>
+            <s:button id="reset" value="Reset" includePageParams="false"/>
+        </div>
+
+    </h:form>
+
+    <rich:panel>
+        <f:facet name="header">Updates Search Results</f:facet>
+    <div class="results" id="updatesList">
+
+    <h:outputText value="The updates search returned no results."
+               rendered="#{empty updatesList.resultList}"/>
+
+    <rich:dataTable id="updatesList"
+                var="_updates"
+              value="#{updatesList.resultList}"
+           rendered="#{not empty updatesList.resultList}">
+        <h:column>
+            <f:facet name="header">
+                <ui:include src="layout/sort.xhtml">
+                    <ui:param name="entityList" value="#{updatesList}"/>
+                    <ui:param name="propertyLabel" value="Tid"/>
+                    <ui:param name="propertyPath" value="updates.tid"/>
+                </ui:include>
+            </f:facet>
+            <h:outputText value="#{_updates.tid}"/>
+        </h:column>
+        <h:column>
+            <f:facet name="header">
+                <ui:include src="layout/sort.xhtml">
+                    <ui:param name="entityList" value="#{updatesList}"/>
+                    <ui:param name="propertyLabel" value="Tasks tid"/>
+                    <ui:param name="propertyPath" value="updates.tasks.tid"/>
+                </ui:include>
+            </f:facet>
+            <h:outputText value="#{_updates.tasks.tid}"/>
+        </h:column>
+        <h:column>
+            <f:facet name="header">
+                <ui:include src="layout/sort.xhtml">
+                    <ui:param name="entityList" value="#{updatesList}"/>
+                    <ui:param name="propertyLabel" value="Updates"/>
+                    <ui:param name="propertyPath" value="updates.updates"/>
+                </ui:include>
+            </f:facet>
+            <h:outputText value="#{_updates.updates}"/>
+        </h:column>
+        <h:column>
+            <f:facet name="header">
+                <ui:include src="layout/sort.xhtml">
+                    <ui:param name="entityList" value="#{updatesList}"/>
+                    <ui:param name="propertyLabel" value="Change time"/>
+                    <ui:param name="propertyPath" value="updates.changeTime"/>
+                </ui:include>
+            </f:facet>
+            <h:outputText value="#{_updates.changeTime}">
+                <s:convertDateTime type="both" dateStyle="short"/>
+            </h:outputText>
+        </h:column>
+        <h:column>
+            <f:facet name="header">
+                <ui:include src="layout/sort.xhtml">
+                    <ui:param name="entityList" value="#{updatesList}"/>
+                    <ui:param name="propertyLabel" value="Memo"/>
+                    <ui:param name="propertyPath" value="updates.memo"/>
+                </ui:include>
+            </f:facet>
+            <h:outputText value="#{_updates.memo}"/>
+        </h:column>
+        <rich:column styleClass="action">
+            <f:facet name="header">Action</f:facet>
+            <s:link view="/#{empty from ? 'Updates' : from}.xhtml"
+                   value="#{empty from ? 'View' : 'Select'}"
+             propagation="#{empty from ? 'none' : 'default'}"
+                      id="updates">
+                <f:param name="updatesTid"
+                        value="#{_updates.tid}"/>
+            </s:link>
+            #{' '}
+            <s:link view="/UpdatesEdit.xhtml"
+                   value="Edit"
+             propagation="none"
+                      id="updatesEdit"
+                rendered="#{empty from}">
+                <f:param name="updatesTid"
+                        value="#{_updates.tid}"/>
+            </s:link>
+        </rich:column>
+    </rich:dataTable>
+
+    </div>
+    </rich:panel>
+
+    <div class="tableControl">
+
+        <s:link view="/UpdatesList.xhtml"
+            rendered="#{updatesList.previousExists}"
+               value="#{messages.left}#{messages.left} First Page"
+                  id="firstPage">
+          <f:param name="firstResult" value="0"/>
+        </s:link>
+
+        <s:link view="/UpdatesList.xhtml"
+            rendered="#{updatesList.previousExists}"
+               value="#{messages.left} Previous Page"
+                  id="previousPage">
+            <f:param name="firstResult"
+                    value="#{updatesList.previousFirstResult}"/>
+        </s:link>
+
+        <s:link view="/UpdatesList.xhtml"
+            rendered="#{updatesList.nextExists}"
+               value="Next Page #{messages.right}"
+                  id="nextPage">
+            <f:param name="firstResult"
+                    value="#{updatesList.nextFirstResult}"/>
+        </s:link>
+
+        <s:link view="/UpdatesList.xhtml"
+            rendered="#{updatesList.nextExists}"
+               value="Last Page #{messages.right}#{messages.right}"
+                  id="lastPage">
+            <f:param name="firstResult"
+                    value="#{updatesList.lastFirstResult}"/>
+        </s:link>
+
+    </div>
+
+    <s:div styleClass="actionButtons" rendered="#{empty from}">
+        <s:button view="/UpdatesEdit.xhtml"
+                    id="create"
+           propagation="none"
+                 value="Create updates">
+            <f:param name="updatesTid"/>
+        </s:button>
+    </s:div>
+
+</ui:define>
+
+</ui:composition>

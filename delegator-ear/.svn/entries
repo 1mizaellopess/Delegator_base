@@ -1,0 +1,71 @@
+9
+
+dir
+136
+http://svn2.xp-dev.com/svn/huji-startup-dropkick/delegator-ear
+http://svn2.xp-dev.com/svn/huji-startup-dropkick
+
+
+
+2009-09-12T22:19:21.177262Z
+64
+tweeto
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+badd65f1-8e70-0410-b420-ff5e4b772e44
+
+.project
+file
+
+
+
+
+2009-10-19T19:10:14.866000Z
+31461c1b07686d54fc1436216c17cc2b
+2009-08-09T18:47:02.262270Z
+20
+ilievsky
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+694
+
+.settings
+dir
+
+EarContent
+dir
+
+resources
+dir
+

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/huji-startup-dropkick/!svn/ver/136/delegator-ejb/ejbModule
+END
+security.drl
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/huji-startup-dropkick/!svn/ver/22/delegator-ejb/ejbModule/security.drl
+END
+seam.properties
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/huji-startup-dropkick/!svn/ver/22/delegator-ejb/ejbModule/seam.properties
+END
+import.sql
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/huji-startup-dropkick/!svn/ver/22/delegator-ejb/ejbModule/import.sql
+END
+components.properties
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/huji-startup-dropkick/!svn/ver/64/delegator-ejb/ejbModule/components.properties
+END

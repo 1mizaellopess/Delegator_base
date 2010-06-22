@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view contentType="text/html" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:a="http://richfaces.org/a4j"
+	xmlns:s="http://jboss.com/products/seam/taglib">
+	
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Tasks</title>
+		<link rel="shortcut icon" href="#{request.contextPath}/favicon.ico" />
+		<a:loadStyle src="resource:///stylesheet/theme.xcss" />
+		<a:loadStyle src="/stylesheet/theme.css" />
+		<ui:insert name="head" />
+
+	</head>
+
+	<body>
+		<script language="javascript" type="text/javascript">
+		
+			var currentPressed;
+
+			function showHide(parentId,obj){
+				
+				var spans = document.getElementsByTagName('span');
+				var i=0;;
+				for(i=0;i!=spans.length-1;i++){
+					if(spans[i].id.indexOf("innerSpan")!=-1){
+						if(spans[i].innerHTML==parentId){
+							if(spans[i].parentNode.parentNode.style.display=='none'){
+								spans[i].parentNode.parentNode.style.display='';
+								obj.src = 'img/application_minus.png'
+							}
+							else{
+								spans[i].parentNode.parentNode.style.display='none';
+								obj.src = 'img/application_add.png'	
+							}
+						}
+					}
+							
+				}
+				
+			}
+			
+			function mouseOver(obj){
+				if(obj.className!='filterTabsPressed'){
+					obj.className='filterTabsOver';
+				}
+			}
+			function mouseOut(obj){
+				if(obj.className!='filterTabsPressed'){
+					obj.className='filterTabs';
+				}
+			}
+			function mouseClick(obj){
+				if(obj!=currentPressed){
+					currentPressed.className='filterTabs';
+					currentPressed=obj;
+					obj.className='filterTabsPressed';
+				}
+			}
+			function resetButtons(){
+				currentPressed.className='filterTabs';
+				currentPressed=document.getElementById('AllTab');
+				currentPressed.className='filterTabsPressed';		
+			}
+
+			function showLines(colId){
+				var objId = 'dtCoulmn'+colId;
+				var node = document.getElementById(objId);
+				alert(node);
+				node.style.display = 'block';
+			}
+
+			function hideLines(colId){
+				//document.getElementById(colId).style.display = 'none';
+			}
+			
+		</script>
+
+		<!-- Include the menu bar  -->
+			<ui:include src="tasksMenu.xhtml"></ui:include>
+
+		<!-- Error Messages area  -->	
+		<div class="List" style=" height : 350px;">
+			<h:messages id="messages" globalOnly="true" styleClass="message" errorClass="errormsg" infoClass="infomsg"
+			warnClass="warnmsg" rendered="#{showGlobalMessages != 'false'}" />
+			 <ui:insert	name="body" /> 
+		</div>
+
+	</body>
+</html>
+</f:view>

@@ -1,0 +1,17 @@
+#Mon Oct 19 22:15:16 IST 2009
+action.package=org.domain.delegator.session
+action.sources=/delegator-ejb/ejbModule
+eclipse.preferences.version=1
+model.package=org.domain.delegator.entity
+model.sources=/delegator-ejb/ejbModule
+seam.ear.project=delegator-ear
+seam.ejb.project=delegator-ejb
+seam.project.connection.profile=MySQL
+seam.project.deployment.type=ear
+seam.project.settings.version=1.1
+seam.project.web.root.folder=/delegator/WebContent
+seam.runtime.name=jboss-seam-2.1.1.GA
+seam.test.creating=true
+seam.test.project=delegator-test
+test.package=org.domain.delegator.test
+test.sources=/delegator-test/test-src

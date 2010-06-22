@@ -1,0 +1,255 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:s="http://jboss.com/products/seam/taglib"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:a="http://richfaces.org/a4j"
+    xmlns:rich="http://richfaces.org/rich"
+    template="layout/template.xhtml">
+
+<ui:define name="body">
+
+    <h:form id="doneBy" styleClass="edit">
+
+        <rich:panel>
+            <f:facet name="header">#{doneByHome.managed ? 'Edit' : 'Add'} Done by</f:facet>
+
+
+            <s:decorate id="tidField" template="layout/edit.xhtml">
+                <ui:define name="label">Tid</ui:define>
+                <h:inputText id="tid"
+                       required="true"
+                       disabled="#{doneByHome.managed}"
+                          value="#{doneByHome.instance.id.tid}">
+                    <a:support event="onblur" reRender="tidField" bypassUpdates="true" ajaxSingle="true"/>
+                </h:inputText>
+            </s:decorate>
+
+            <s:decorate id="eidField" template="layout/edit.xhtml">
+                <ui:define name="label">Eid</ui:define>
+                <h:inputText id="eid"
+                       required="true"
+                       disabled="#{doneByHome.managed}"
+                          value="#{doneByHome.instance.id.eid}">
+                    <a:support event="onblur" reRender="eidField" bypassUpdates="true" ajaxSingle="true"/>
+                </h:inputText>
+            </s:decorate>
+
+
+
+
+            <s:decorate id="changedField" template="layout/edit.xhtml">
+                <ui:define name="label">Changed</ui:define>
+                <h:inputText id="changed"
+                       required="true"
+                          value="#{doneByHome.instance.changed}">
+                    <a:support event="onblur" reRender="changedField" bypassUpdates="true" ajaxSingle="true"/>
+                </h:inputText>
+            </s:decorate>
+
+            <div style="clear:both">
+                <span class="required">*</span>
+                required fields
+            </div>
+
+        </rich:panel>
+
+        <div class="actionButtons">
+
+            <h:commandButton id="save"
+                          value="Save"
+                         action="#{doneByHome.persist}"
+                       disabled="#{!doneByHome.wired}"
+                       rendered="#{!doneByHome.managed}"/>
+
+            <h:commandButton id="update"
+                          value="Save"
+                         action="#{doneByHome.update}"
+                       rendered="#{doneByHome.managed}"/>
+
+            <h:commandButton id="delete"
+                          value="Delete"
+                         action="#{doneByHome.remove}"
+                      immediate="true"
+                       rendered="#{doneByHome.managed}"/>
+
+            <s:button id="cancelEdit"
+                   value="Cancel"
+             propagation="end"
+                    view="/DoneBy.xhtml"
+                rendered="#{doneByHome.managed}"/>
+
+            <s:button id="cancelAdd"
+                   value="Cancel"
+             propagation="end"
+                    view="/#{empty doneByFrom ? 'DoneByList' : doneByFrom}.xhtml"
+                rendered="#{!doneByHome.managed}"/>
+
+        </div>
+    </h:form>
+
+<rich:tabPanel switchType="ajax">
+
+    <rich:tab label="Tasks *" labelClass="required">
+    <div class="association" id="tasksParent">
+
+        <h:outputText value="There is no tasks associated with this doneBy."
+                   rendered="#{doneByHome.instance.tasks == null}"/>
+
+        <rich:dataTable var="_tasks"
+                   value="#{doneByHome.instance.tasks}"
+                rendered="#{doneByHome.instance.tasks != null}"
+              rowClasses="rvgRowOne,rvgRowTwo"
+                      id="tasksTable">
+            <h:column>
+                <f:facet name="header">Tid</f:facet>
+                <h:outputText value="#{_tasks.tid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Employee eid</f:facet>
+                <h:outputText value="#{_tasks.employee.eid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Cdate</f:facet>
+                <h:outputText value="#{_tasks.cdate}">
+                    <s:convertDateTime type="both" dateStyle="short"/>
+                </h:outputText>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Edate</f:facet>
+                <h:outputText value="#{_tasks.edate}">
+                    <s:convertDateTime type="both" dateStyle="short"/>
+                </h:outputText>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Finished date</f:facet>
+                <h:outputText value="#{_tasks.finishedDate}">
+                    <s:convertDateTime type="both" dateStyle="short"/>
+                </h:outputText>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Title</f:facet>
+                <h:outputText value="#{_tasks.title}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Description</f:facet>
+                <h:outputText value="#{_tasks.description}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Attachment</f:facet>
+                <h:outputText value="#{_tasks.attachment}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Status</f:facet>
+                <h:outputText value="#{_tasks.status}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Flagged</f:facet>
+                <h:outputText value="#{_tasks.flagged}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Delegated</f:facet>
+                <h:outputText value="#{_tasks.delegated}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Tasks c by tid tid</f:facet>
+                <h:outputText value="#{_tasks.tasksCByTid.tid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Updates tid</f:facet>
+                <h:outputText value="#{_tasks.updates.tid}"/>
+            </h:column>
+        </rich:dataTable>
+
+        <div class="actionButtons">
+            <s:button value="#{doneByHome.instance.tasks != null ? 'Change' : 'Select'} tasks"
+                       view="/TasksList.xhtml">
+                <f:param name="from" value="DoneByEdit"/>
+            </s:button>
+        </div>
+
+    </div>
+    </rich:tab>
+
+    <rich:tab label="Employee *" labelClass="required">
+    <div class="association" id="employeeParent">
+
+        <h:outputText value="There is no employee associated with this doneBy."
+                   rendered="#{doneByHome.instance.employee == null}"/>
+
+        <rich:dataTable var="_employee"
+                   value="#{doneByHome.instance.employee}"
+                rendered="#{doneByHome.instance.employee != null}"
+              rowClasses="rvgRowOne,rvgRowTwo"
+                      id="employeeTable">
+            <h:column>
+                <f:facet name="header">Eid</f:facet>
+                <h:outputText value="#{_employee.eid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">User name</f:facet>
+                <h:outputText value="#{_employee.userName}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Name</f:facet>
+                <h:outputText value="#{_employee.name}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Job desc</f:facet>
+                <h:outputText value="#{_employee.jobDesc}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Lname</f:facet>
+                <h:outputText value="#{_employee.lname}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Bdate</f:facet>
+                <h:outputText value="#{_employee.bdate}">
+                    <s:convertDateTime type="date" dateStyle="short"/>
+                </h:outputText>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Address</f:facet>
+                <h:outputText value="#{_employee.address}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Email</f:facet>
+                <h:outputText value="#{_employee.email}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Phone num</f:facet>
+                <h:outputText value="#{_employee.phoneNum}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Auth</f:facet>
+                <h:outputText value="#{_employee.auth}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Password</f:facet>
+                <h:outputText value="#{_employee.password}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Late eid</f:facet>
+                <h:outputText value="#{_employee.late.eid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">On time eid</f:facet>
+                <h:outputText value="#{_employee.onTime.eid}"/>
+            </h:column>
+        </rich:dataTable>
+
+        <div class="actionButtons">
+            <s:button value="#{doneByHome.instance.employee != null ? 'Change' : 'Select'} employee"
+                       view="/EmployeeList.xhtml">
+                <f:param name="from" value="DoneByEdit"/>
+            </s:button>
+        </div>
+
+    </div>
+    </rich:tab>
+</rich:tabPanel>
+</ui:define>
+
+</ui:composition>

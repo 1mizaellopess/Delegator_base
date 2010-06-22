@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap/deploy/messaging
+END
+remoting-service.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap/deploy/messaging/remoting-service.xml
+END
+messaging-service.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap/deploy/messaging/messaging-service.xml
+END
+jms-ds.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap/deploy/messaging/jms-ds.xml
+END
+destinations-service.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap/deploy/messaging/destinations-service.xml
+END
+hsqldb-persistence-service.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap/deploy/messaging/hsqldb-persistence-service.xml
+END
+legacy-service.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap/deploy/messaging/legacy-service.xml
+END
+connection-factories-service.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap/deploy/messaging/connection-factories-service.xml
+END

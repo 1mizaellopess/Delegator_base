@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/huji-startup-dropkick/!svn/ver/29/delegator-ear/EarContent
+END
+mvel14.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/huji-startup-dropkick/!svn/ver/20/delegator-ear/EarContent/mvel14.jar
+END
+jboss-seam.jar
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/huji-startup-dropkick/!svn/ver/20/delegator-ear/EarContent/jboss-seam.jar
+END
+jbpm-jpdl.jar
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/huji-startup-dropkick/!svn/ver/20/delegator-ear/EarContent/jbpm-jpdl.jar
+END
+drools-core.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/huji-startup-dropkick/!svn/ver/20/delegator-ear/EarContent/drools-core.jar
+END
+drools-compiler.jar
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/huji-startup-dropkick/!svn/ver/20/delegator-ear/EarContent/drools-compiler.jar
+END
+richfaces-api.jar
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/huji-startup-dropkick/!svn/ver/20/delegator-ear/EarContent/richfaces-api.jar
+END
+antlr-runtime.jar
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/huji-startup-dropkick/!svn/ver/20/delegator-ear/EarContent/antlr-runtime.jar
+END
+jboss-el.jar
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/huji-startup-dropkick/!svn/ver/20/delegator-ear/EarContent/jboss-el.jar
+END

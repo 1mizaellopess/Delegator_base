@@ -1,0 +1,221 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/huji-startup-dropkick/!svn/ver/136/delegator-ejb/ejbModule/org/domain/delegator/session
+END
+StatusesBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/huji-startup-dropkick/!svn/ver/123/delegator-ejb/ejbModule/org/domain/delegator/session/StatusesBean.java
+END
+DelegatedTasksList.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/huji-startup-dropkick/!svn/ver/107/delegator-ejb/ejbModule/org/domain/delegator/session/DelegatedTasksList.java
+END
+TasksHome.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/huji-startup-dropkick/!svn/ver/136/delegator-ejb/ejbModule/org/domain/delegator/session/TasksHome.java
+END
+EmployeeList.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/huji-startup-dropkick/!svn/ver/126/delegator-ejb/ejbModule/org/domain/delegator/session/EmployeeList.java
+END
+OnTimeHome.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/huji-startup-dropkick/!svn/ver/22/delegator-ejb/ejbModule/org/domain/delegator/session/OnTimeHome.java
+END
+UpdatesHome.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/huji-startup-dropkick/!svn/ver/22/delegator-ejb/ejbModule/org/domain/delegator/session/UpdatesHome.java
+END
+WorksForHome.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/huji-startup-dropkick/!svn/ver/30/delegator-ejb/ejbModule/org/domain/delegator/session/WorksForHome.java
+END
+LateList.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/huji-startup-dropkick/!svn/ver/22/delegator-ejb/ejbModule/org/domain/delegator/session/LateList.java
+END
+DivisionsList.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/huji-startup-dropkick/!svn/ver/22/delegator-ejb/ejbModule/org/domain/delegator/session/DivisionsList.java
+END
+TasksScreenActions.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/huji-startup-dropkick/!svn/ver/82/delegator-ejb/ejbModule/org/domain/delegator/session/TasksScreenActions.java
+END
+markedTasks.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/huji-startup-dropkick/!svn/ver/67/delegator-ejb/ejbModule/org/domain/delegator/session/markedTasks.java
+END
+StatusesEnum.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/huji-startup-dropkick/!svn/ver/91/delegator-ejb/ejbModule/org/domain/delegator/session/StatusesEnum.java
+END
+Statuses.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/huji-startup-dropkick/!svn/ver/63/delegator-ejb/ejbModule/org/domain/delegator/session/Statuses.java
+END
+ArchivedList.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/huji-startup-dropkick/!svn/ver/64/delegator-ejb/ejbModule/org/domain/delegator/session/ArchivedList.java
+END
+ViewUserTasks.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/huji-startup-dropkick/!svn/ver/125/delegator-ejb/ejbModule/org/domain/delegator/session/ViewUserTasks.java
+END
+LoggedUserBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/huji-startup-dropkick/!svn/ver/71/delegator-ejb/ejbModule/org/domain/delegator/session/LoggedUserBean.java
+END
+DoneByList.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/huji-startup-dropkick/!svn/ver/22/delegator-ejb/ejbModule/org/domain/delegator/session/DoneByList.java
+END
+Authenticator.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/huji-startup-dropkick/!svn/ver/69/delegator-ejb/ejbModule/org/domain/delegator/session/Authenticator.java
+END
+TasksCList.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/huji-startup-dropkick/!svn/ver/64/delegator-ejb/ejbModule/org/domain/delegator/session/TasksCList.java
+END
+DelegatedTasksHome.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/huji-startup-dropkick/!svn/ver/78/delegator-ejb/ejbModule/org/domain/delegator/session/DelegatedTasksHome.java
+END
+LoggedUser.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/huji-startup-dropkick/!svn/ver/30/delegator-ejb/ejbModule/org/domain/delegator/session/LoggedUser.java
+END
+EmployeeHome.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/huji-startup-dropkick/!svn/ver/64/delegator-ejb/ejbModule/org/domain/delegator/session/EmployeeHome.java
+END
+TasksList.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/huji-startup-dropkick/!svn/ver/64/delegator-ejb/ejbModule/org/domain/delegator/session/TasksList.java
+END
+OnTimeList.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/huji-startup-dropkick/!svn/ver/22/delegator-ejb/ejbModule/org/domain/delegator/session/OnTimeList.java
+END
+MarkedEmployeeBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/huji-startup-dropkick/!svn/ver/136/delegator-ejb/ejbModule/org/domain/delegator/session/MarkedEmployeeBean.java
+END
+UpdatesList.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/huji-startup-dropkick/!svn/ver/22/delegator-ejb/ejbModule/org/domain/delegator/session/UpdatesList.java
+END
+WorksForList.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/huji-startup-dropkick/!svn/ver/30/delegator-ejb/ejbModule/org/domain/delegator/session/WorksForList.java
+END
+LateHome.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/huji-startup-dropkick/!svn/ver/22/delegator-ejb/ejbModule/org/domain/delegator/session/LateHome.java
+END
+DivisionsHome.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/huji-startup-dropkick/!svn/ver/22/delegator-ejb/ejbModule/org/domain/delegator/session/DivisionsHome.java
+END
+ArchivedHome.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/huji-startup-dropkick/!svn/ver/64/delegator-ejb/ejbModule/org/domain/delegator/session/ArchivedHome.java
+END
+UserTasksFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/huji-startup-dropkick/!svn/ver/117/delegator-ejb/ejbModule/org/domain/delegator/session/UserTasksFilter.java
+END
+MarkedEmployee.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/huji-startup-dropkick/!svn/ver/132/delegator-ejb/ejbModule/org/domain/delegator/session/MarkedEmployee.java
+END
+DoneByHome.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/huji-startup-dropkick/!svn/ver/22/delegator-ejb/ejbModule/org/domain/delegator/session/DoneByHome.java
+END
+TasksCHome.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/huji-startup-dropkick/!svn/ver/64/delegator-ejb/ejbModule/org/domain/delegator/session/TasksCHome.java
+END
+TasksScreenActionsBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/huji-startup-dropkick/!svn/ver/82/delegator-ejb/ejbModule/org/domain/delegator/session/TasksScreenActionsBean.java
+END
+markedTasksBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/huji-startup-dropkick/!svn/ver/79/delegator-ejb/ejbModule/org/domain/delegator/session/markedTasksBean.java
+END

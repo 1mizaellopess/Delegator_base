@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap
+END
+log4j.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap/log4j.xml
+END
+commons-logging.properties
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap/commons-logging.properties
+END
+jndi.properties
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap/jndi.properties
+END

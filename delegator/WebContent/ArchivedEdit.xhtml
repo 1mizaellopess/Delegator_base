@@ -1,0 +1,481 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:s="http://jboss.com/products/seam/taglib"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:a="http://richfaces.org/a4j"
+    xmlns:rich="http://richfaces.org/rich"
+    template="layout/template.xhtml">
+
+<ui:define name="body">
+
+    <h:form id="archived" styleClass="edit">
+
+        <rich:panel>
+            <f:facet name="header">#{archivedHome.managed ? 'Edit' : 'Add'} Archived</f:facet>
+
+
+            <s:decorate id="tidField" template="layout/edit.xhtml">
+                <ui:define name="label">Tid</ui:define>
+                <h:inputText id="tid"
+                       required="true"
+                       disabled="#{archivedHome.managed}"
+                          value="#{archivedHome.instance.tid}">
+                    <a:support event="onblur" reRender="tidField" bypassUpdates="true" ajaxSingle="true"/>
+                </h:inputText>
+            </s:decorate>
+
+
+
+
+
+            <s:decorate id="cdateField" template="layout/edit.xhtml">
+                <ui:define name="label">Cdate</ui:define>
+                <rich:calendar id="cdate"
+                       required="true"
+                          value="#{archivedHome.instance.cdate}" datePattern="MM/dd/yyyy hh:mm a"/>
+            </s:decorate>
+
+
+            <s:decorate id="edateField" template="layout/edit.xhtml">
+                <ui:define name="label">Edate</ui:define>
+                <rich:calendar id="edate"
+                       required="true"
+                          value="#{archivedHome.instance.edate}" datePattern="MM/dd/yyyy hh:mm a"/>
+            </s:decorate>
+
+
+            <s:decorate id="titleField" template="layout/edit.xhtml">
+                <ui:define name="label">Title</ui:define>
+                <h:inputTextarea id="title"
+                               cols="80"
+                               rows="3"
+                           required="true"
+                              value="#{archivedHome.instance.title}"/>
+            </s:decorate>
+
+
+            <s:decorate id="descriptionField" template="layout/edit.xhtml">
+                <ui:define name="label">Description</ui:define>
+                <h:inputTextarea id="description"
+                               cols="80"
+                               rows="3"
+                              value="#{archivedHome.instance.description}"/>
+            </s:decorate>
+
+
+            <s:decorate id="attachmentField" template="layout/edit.xhtml">
+                <ui:define name="label">Attachment</ui:define>
+                <h:inputTextarea id="attachment"
+                               cols="80"
+                               rows="3"
+                              value="#{archivedHome.instance.attachment}"/>
+            </s:decorate>
+
+
+            <s:decorate id="statusField" template="layout/edit.xhtml">
+                <ui:define name="label">Status</ui:define>
+                <h:inputText id="status"
+                       required="true"
+                           size="15"
+                      maxlength="15"
+                          value="#{archivedHome.instance.status}">
+                    <a:support event="onblur" reRender="statusField" bypassUpdates="true" ajaxSingle="true"/>
+                </h:inputText>
+            </s:decorate>
+
+
+            <s:decorate id="parallelField" template="layout/edit.xhtml">
+                <ui:define name="label">Parallel</ui:define>
+                <h:inputText id="parallel"
+                          value="#{archivedHome.instance.parallel}">
+                    <a:support event="onblur" reRender="parallelField" bypassUpdates="true" ajaxSingle="true"/>
+                </h:inputText>
+            </s:decorate>
+
+
+
+
+            <div style="clear:both">
+                <span class="required">*</span>
+                required fields
+            </div>
+
+        </rich:panel>
+
+        <div class="actionButtons">
+
+            <h:commandButton id="save"
+                          value="Save"
+                         action="#{archivedHome.persist}"
+                       disabled="#{!archivedHome.wired}"
+                       rendered="#{!archivedHome.managed}"/>
+
+            <h:commandButton id="update"
+                          value="Save"
+                         action="#{archivedHome.update}"
+                       rendered="#{archivedHome.managed}"/>
+
+            <h:commandButton id="delete"
+                          value="Delete"
+                         action="#{archivedHome.remove}"
+                      immediate="true"
+                       rendered="#{archivedHome.managed}"/>
+
+            <s:button id="cancelEdit"
+                   value="Cancel"
+             propagation="end"
+                    view="/Archived.xhtml"
+                rendered="#{archivedHome.managed}"/>
+
+            <s:button id="cancelAdd"
+                   value="Cancel"
+             propagation="end"
+                    view="/#{empty archivedFrom ? 'ArchivedList' : archivedFrom}.xhtml"
+                rendered="#{!archivedHome.managed}"/>
+
+        </div>
+    </h:form>
+
+<rich:tabPanel switchType="ajax">
+
+    <rich:tab label="Archived by parent task id *" labelClass="required">
+    <div class="association" id="archivedByParentTaskIdParent">
+
+        <h:outputText value="There is no archivedByParentTaskId associated with this archived."
+                   rendered="#{archivedHome.instance.archivedByParentTaskId == null}"/>
+
+        <rich:dataTable var="_archived"
+                   value="#{archivedHome.instance.archivedByParentTaskId}"
+                rendered="#{archivedHome.instance.archivedByParentTaskId != null}"
+              rowClasses="rvgRowOne,rvgRowTwo"
+                      id="archivedByParentTaskIdTable">
+            <h:column>
+                <f:facet name="header">Tid</f:facet>
+                <h:outputText value="#{_archived.tid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Archived by parent task id tid</f:facet>
+                <h:outputText value="#{_archived.archivedByParentTaskId.tid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Archived by root task id tid</f:facet>
+                <h:outputText value="#{_archived.archivedByRootTaskId.tid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Employee eid</f:facet>
+                <h:outputText value="#{_archived.employee.eid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Cdate</f:facet>
+                <h:outputText value="#{_archived.cdate}">
+                    <s:convertDateTime type="both" dateStyle="short"/>
+                </h:outputText>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Edate</f:facet>
+                <h:outputText value="#{_archived.edate}">
+                    <s:convertDateTime type="both" dateStyle="short"/>
+                </h:outputText>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Title</f:facet>
+                <h:outputText value="#{_archived.title}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Description</f:facet>
+                <h:outputText value="#{_archived.description}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Attachment</f:facet>
+                <h:outputText value="#{_archived.attachment}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Status</f:facet>
+                <h:outputText value="#{_archived.status}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Parallel</f:facet>
+                <h:outputText value="#{_archived.parallel}"/>
+            </h:column>
+        </rich:dataTable>
+
+    </div>
+    </rich:tab>
+
+    <rich:tab label="Archived by root task id *" labelClass="required">
+    <div class="association" id="archivedByRootTaskIdParent">
+
+        <h:outputText value="There is no archivedByRootTaskId associated with this archived."
+                   rendered="#{archivedHome.instance.archivedByRootTaskId == null}"/>
+
+        <rich:dataTable var="_archived"
+                   value="#{archivedHome.instance.archivedByRootTaskId}"
+                rendered="#{archivedHome.instance.archivedByRootTaskId != null}"
+              rowClasses="rvgRowOne,rvgRowTwo"
+                      id="archivedByRootTaskIdTable">
+            <h:column>
+                <f:facet name="header">Tid</f:facet>
+                <h:outputText value="#{_archived.tid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Archived by parent task id tid</f:facet>
+                <h:outputText value="#{_archived.archivedByParentTaskId.tid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Archived by root task id tid</f:facet>
+                <h:outputText value="#{_archived.archivedByRootTaskId.tid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Employee eid</f:facet>
+                <h:outputText value="#{_archived.employee.eid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Cdate</f:facet>
+                <h:outputText value="#{_archived.cdate}">
+                    <s:convertDateTime type="both" dateStyle="short"/>
+                </h:outputText>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Edate</f:facet>
+                <h:outputText value="#{_archived.edate}">
+                    <s:convertDateTime type="both" dateStyle="short"/>
+                </h:outputText>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Title</f:facet>
+                <h:outputText value="#{_archived.title}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Description</f:facet>
+                <h:outputText value="#{_archived.description}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Attachment</f:facet>
+                <h:outputText value="#{_archived.attachment}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Status</f:facet>
+                <h:outputText value="#{_archived.status}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Parallel</f:facet>
+                <h:outputText value="#{_archived.parallel}"/>
+            </h:column>
+        </rich:dataTable>
+
+    </div>
+    </rich:tab>
+
+    <rich:tab label="Employee *" labelClass="required">
+    <div class="association" id="employeeParent">
+
+        <h:outputText value="There is no employee associated with this archived."
+                   rendered="#{archivedHome.instance.employee == null}"/>
+
+        <rich:dataTable var="_employee"
+                   value="#{archivedHome.instance.employee}"
+                rendered="#{archivedHome.instance.employee != null}"
+              rowClasses="rvgRowOne,rvgRowTwo"
+                      id="employeeTable">
+            <h:column>
+                <f:facet name="header">Eid</f:facet>
+                <h:outputText value="#{_employee.eid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">User name</f:facet>
+                <h:outputText value="#{_employee.userName}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Name</f:facet>
+                <h:outputText value="#{_employee.name}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Job desc</f:facet>
+                <h:outputText value="#{_employee.jobDesc}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Lname</f:facet>
+                <h:outputText value="#{_employee.lname}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Bdate</f:facet>
+                <h:outputText value="#{_employee.bdate}">
+                    <s:convertDateTime type="date" dateStyle="short"/>
+                </h:outputText>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Address</f:facet>
+                <h:outputText value="#{_employee.address}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Email</f:facet>
+                <h:outputText value="#{_employee.email}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Phone num</f:facet>
+                <h:outputText value="#{_employee.phoneNum}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Auth</f:facet>
+                <h:outputText value="#{_employee.auth}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Password</f:facet>
+                <h:outputText value="#{_employee.password}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Late eid</f:facet>
+                <h:outputText value="#{_employee.late.eid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">On time eid</f:facet>
+                <h:outputText value="#{_employee.onTime.eid}"/>
+            </h:column>
+        </rich:dataTable>
+
+        <div class="actionButtons">
+            <s:button value="#{archivedHome.instance.employee != null ? 'Change' : 'Select'} employee"
+                       view="/EmployeeList.xhtml">
+                <f:param name="from" value="ArchivedEdit"/>
+            </s:button>
+        </div>
+
+    </div>
+    </rich:tab>
+
+    <rich:tab label="Archiveds for root task id">
+        <h:form styleClass="association" id="archivedsForRootTaskIdChildren">
+
+            <h:outputText value="There are no archivedsForRootTaskId associated with this archived."
+                       rendered="#{empty archivedHome.archivedsForRootTaskId}"/>
+
+            <rich:dataTable value="#{archivedHome.archivedsForRootTaskId}"
+                           var="_archived"
+                      rendered="#{not empty archivedHome.archivedsForRootTaskId}"
+                    rowClasses="rvgRowOne,rvgRowTwo"
+                            id="archivedsForRootTaskIdTable">
+                <rich:column sortBy="#{_archived.tid}">
+                    <f:facet name="header">Tid</f:facet>
+                    <h:outputText value="#{_archived.tid}"/>
+                </rich:column>
+                <rich:column sortBy="#{_archived.cdate}">
+                    <f:facet name="header">Cdate</f:facet>
+                    <h:outputText value="#{_archived.cdate}">
+                        <s:convertDateTime type="both" dateStyle="short"/>
+                    </h:outputText>
+                </rich:column>
+                <rich:column sortBy="#{_archived.edate}">
+                    <f:facet name="header">Edate</f:facet>
+                    <h:outputText value="#{_archived.edate}">
+                        <s:convertDateTime type="both" dateStyle="short"/>
+                    </h:outputText>
+                </rich:column>
+                <rich:column sortBy="#{_archived.title}">
+                    <f:facet name="header">Title</f:facet>
+                    <h:outputText value="#{_archived.title}"/>
+                </rich:column>
+                <rich:column sortBy="#{_archived.description}">
+                    <f:facet name="header">Description</f:facet>
+                    <h:outputText value="#{_archived.description}"/>
+                </rich:column>
+                <rich:column sortBy="#{_archived.attachment}">
+                    <f:facet name="header">Attachment</f:facet>
+                    <h:outputText value="#{_archived.attachment}"/>
+                </rich:column>
+                <rich:column sortBy="#{_archived.status}">
+                    <f:facet name="header">Status</f:facet>
+                    <h:outputText value="#{_archived.status}"/>
+                </rich:column>
+                <rich:column sortBy="#{_archived.parallel}">
+                    <f:facet name="header">Parallel</f:facet>
+                    <h:outputText value="#{_archived.parallel}"/>
+                </rich:column>
+            </rich:dataTable>
+
+        </h:form>
+
+        <f:subview rendered="#{archivedHome.managed}" id="archivedsForRootTaskId">
+        <div class="actionButtons">
+            <s:button id="addarchived"
+                   value="Add archived"
+                    view="/ArchivedEdit.xhtml"
+             propagation="none">
+                 <f:param name="archivedTid"
+                         value="#{archivedHome.instance.tid}"/>
+                 <f:param name="archivedFrom" value="Archived"/>
+            </s:button>
+        </div>
+        </f:subview>
+    </rich:tab>
+
+    <rich:tab label="Archiveds for parent task id">
+        <h:form styleClass="association" id="archivedsForParentTaskIdChildren">
+
+            <h:outputText value="There are no archivedsForParentTaskId associated with this archived."
+                       rendered="#{empty archivedHome.archivedsForParentTaskId}"/>
+
+            <rich:dataTable value="#{archivedHome.archivedsForParentTaskId}"
+                           var="_archived"
+                      rendered="#{not empty archivedHome.archivedsForParentTaskId}"
+                    rowClasses="rvgRowOne,rvgRowTwo"
+                            id="archivedsForParentTaskIdTable">
+                <rich:column sortBy="#{_archived.tid}">
+                    <f:facet name="header">Tid</f:facet>
+                    <h:outputText value="#{_archived.tid}"/>
+                </rich:column>
+                <rich:column sortBy="#{_archived.cdate}">
+                    <f:facet name="header">Cdate</f:facet>
+                    <h:outputText value="#{_archived.cdate}">
+                        <s:convertDateTime type="both" dateStyle="short"/>
+                    </h:outputText>
+                </rich:column>
+                <rich:column sortBy="#{_archived.edate}">
+                    <f:facet name="header">Edate</f:facet>
+                    <h:outputText value="#{_archived.edate}">
+                        <s:convertDateTime type="both" dateStyle="short"/>
+                    </h:outputText>
+                </rich:column>
+                <rich:column sortBy="#{_archived.title}">
+                    <f:facet name="header">Title</f:facet>
+                    <h:outputText value="#{_archived.title}"/>
+                </rich:column>
+                <rich:column sortBy="#{_archived.description}">
+                    <f:facet name="header">Description</f:facet>
+                    <h:outputText value="#{_archived.description}"/>
+                </rich:column>
+                <rich:column sortBy="#{_archived.attachment}">
+                    <f:facet name="header">Attachment</f:facet>
+                    <h:outputText value="#{_archived.attachment}"/>
+                </rich:column>
+                <rich:column sortBy="#{_archived.status}">
+                    <f:facet name="header">Status</f:facet>
+                    <h:outputText value="#{_archived.status}"/>
+                </rich:column>
+                <rich:column sortBy="#{_archived.parallel}">
+                    <f:facet name="header">Parallel</f:facet>
+                    <h:outputText value="#{_archived.parallel}"/>
+                </rich:column>
+            </rich:dataTable>
+
+        </h:form>
+
+        <f:subview rendered="#{archivedHome.managed}" id="archivedsForParentTaskId">
+        <div class="actionButtons">
+            <s:button id="addarchived"
+                   value="Add archived"
+                    view="/ArchivedEdit.xhtml"
+             propagation="none">
+                 <f:param name="archivedTid"
+                         value="#{archivedHome.instance.tid}"/>
+                 <f:param name="archivedFrom" value="Archived"/>
+            </s:button>
+        </div>
+        </f:subview>
+    </rich:tab>
+</rich:tabPanel>
+</ui:define>
+
+</ui:composition>

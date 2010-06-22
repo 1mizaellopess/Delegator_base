@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap/deployers
+END
+security-deployer-beans.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap/deployers/security-deployer-beans.xml
+END
+ejb-deployer-beans.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap/deployers/ejb-deployer-beans.xml
+END
+ejb3-deployers-beans.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap/deployers/ejb3-deployers-beans.xml
+END
+aspect-deployer-beans.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap/deployers/aspect-deployer-beans.xml
+END
+jca-deployers-beans.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap/deployers/jca-deployers-beans.xml
+END
+jboss-aspect-library-beans.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap/deployers/jboss-aspect-library-beans.xml
+END
+metadata-beans.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap/deployers/metadata-beans.xml
+END

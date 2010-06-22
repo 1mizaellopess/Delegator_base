@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap/conf/props
+END
+messaging-users.properties
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap/conf/props/messaging-users.properties
+END
+messaging-roles.properties
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap/conf/props/messaging-roles.properties
+END

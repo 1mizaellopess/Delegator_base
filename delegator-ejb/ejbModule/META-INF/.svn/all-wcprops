@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/huji-startup-dropkick/!svn/ver/64/delegator-ejb/ejbModule/META-INF
+END
+ejb-jar.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/huji-startup-dropkick/!svn/ver/22/delegator-ejb/ejbModule/META-INF/ejb-jar.xml
+END
+persistence.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/huji-startup-dropkick/!svn/ver/64/delegator-ejb/ejbModule/META-INF/persistence.xml
+END
+MANIFEST.MF
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/huji-startup-dropkick/!svn/ver/22/delegator-ejb/ejbModule/META-INF/MANIFEST.MF
+END

@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/huji-startup-dropkick/!svn/ver/126/delegator-ejb/ejbModule/org/domain/delegator/entity
+END
+TasksCId.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/huji-startup-dropkick/!svn/ver/22/delegator-ejb/ejbModule/org/domain/delegator/entity/TasksCId.java
+END
+Employee.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/huji-startup-dropkick/!svn/ver/64/delegator-ejb/ejbModule/org/domain/delegator/entity/Employee.java
+END
+Tasks.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/huji-startup-dropkick/!svn/ver/95/delegator-ejb/ejbModule/org/domain/delegator/entity/Tasks.java
+END
+OnTime.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/huji-startup-dropkick/!svn/ver/64/delegator-ejb/ejbModule/org/domain/delegator/entity/OnTime.java
+END
+Updates.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/huji-startup-dropkick/!svn/ver/64/delegator-ejb/ejbModule/org/domain/delegator/entity/Updates.java
+END
+DoneBy.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/huji-startup-dropkick/!svn/ver/64/delegator-ejb/ejbModule/org/domain/delegator/entity/DoneBy.java
+END
+WorksFor.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/huji-startup-dropkick/!svn/ver/126/delegator-ejb/ejbModule/org/domain/delegator/entity/WorksFor.java
+END
+Late.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/huji-startup-dropkick/!svn/ver/64/delegator-ejb/ejbModule/org/domain/delegator/entity/Late.java
+END
+Divisions.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/huji-startup-dropkick/!svn/ver/64/delegator-ejb/ejbModule/org/domain/delegator/entity/Divisions.java
+END
+TasksC.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/huji-startup-dropkick/!svn/ver/64/delegator-ejb/ejbModule/org/domain/delegator/entity/TasksC.java
+END
+DoneById.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/huji-startup-dropkick/!svn/ver/64/delegator-ejb/ejbModule/org/domain/delegator/entity/DoneById.java
+END
+Archived.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/huji-startup-dropkick/!svn/ver/64/delegator-ejb/ejbModule/org/domain/delegator/entity/Archived.java
+END
+WorksForId.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/huji-startup-dropkick/!svn/ver/28/delegator-ejb/ejbModule/org/domain/delegator/entity/WorksForId.java
+END

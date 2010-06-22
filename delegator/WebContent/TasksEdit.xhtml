@@ -1,0 +1,141 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:s="http://jboss.com/products/seam/taglib"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:a="http://richfaces.org/a4j"
+    xmlns:rich="http://richfaces.org/rich"
+    template="layout/taskEditTemplate.xhtml">
+
+<ui:define name="body">
+
+    <h:form id="tasks" styleClass="edit">
+
+        <rich:panel>
+            <f:facet name="header">#{tasksHome.managed ? 'Edit' : 'Add'} Task</f:facet>
+            	<div>
+            			<div style="float: left; width: 65%">
+							<s:decorate id="titleField" template="layout/edit.xhtml">
+				                <ui:define name="label">Title / Subject</ui:define>
+				                <h:inputTextarea id="title"
+				                               cols="50"
+				                               rows="1"
+				                           required="true"
+				                              value="#{tasksHome.instance.title}"/>
+				            </s:decorate>
+							
+							            <s:decorate id="descriptionField" template="layout/edit.xhtml">
+				                <ui:define name="label">Description</ui:define>
+				                <h:inputTextarea id="description"
+				                               cols="60"
+				                               rows="3"
+				                              value="#{tasksHome.instance.description}"/>
+				            </s:decorate>
+							
+				            <s:decorate id="cdateField" template="layout/edit.xhtml" rendered="false">
+				                <ui:define name="label">Cdate</ui:define>
+				                <rich:calendar id="cdate"
+				                          value="#{tasksHome.instance.cdate}" datePattern="MM/dd/yyyy hh:mm a"/>
+				            </s:decorate>
+				
+				
+				            <s:decorate id="edateField" template="layout/edit.xhtml">
+				                <ui:define name="label">Due Date</ui:define>
+				                <rich:calendar id="edate"
+				                          value="#{tasksHome.instance.edate}" datePattern="MM/dd/yyyy hh:mm a"/>
+				            </s:decorate>
+				
+				
+				            <s:decorate id="finishedDateField" template="layout/edit.xhtml" rendered="false">
+				                <ui:define name="label">Finished date</ui:define>
+				                <rich:calendar id="finishedDate"
+				                          value="#{tasksHome.instance.finishedDate}" datePattern="MM/dd/yyyy hh:mm a"/>
+				            </s:decorate>
+				
+				            <s:decorate id="attachmentField" template="layout/edit.xhtml" rendered="false">
+				                <ui:define name="label">Attachment</ui:define>
+				                <h:inputTextarea id="attachment"
+				                               cols="80"
+				                               rows="3"
+				                              value="#{tasksHome.instance.attachment}"/>
+				            </s:decorate>
+				
+				
+				            <s:decorate id="statusField" template="layout/edit.xhtml">
+				                <ui:define name="label">Status</ui:define>
+				                <rich:comboBox id="status" required="true" value="#{tasksHome.instance.status}" suggestionValues="#{Statuses.statusesList}">
+				                	
+				                </rich:comboBox>
+				                
+				            </s:decorate>
+				
+				
+				            <s:decorate id="flaggedField" template="layout/edit.xhtml">
+				                <ui:define name="label">High Importance</ui:define>
+				                <h:selectBooleanCheckbox id="flagged"
+				                                   required="false"
+				                                      value="#{tasksHome.instance.flagged}"/>
+				            </s:decorate>
+				
+				
+				            <s:decorate id="delegatedField" template="layout/edit.xhtml" rendered="false">
+				                <ui:define name="label">Delegated</ui:define>
+				                <h:selectBooleanCheckbox id="delegated"
+				                                   required="true"
+				                                      value="#{tasksHome.instance.delegated}"/>
+				            </s:decorate>
+          				</div>
+          				<div style="float: right; width: 35%">
+          						<ui:include src="/EmployeeList.xhtml" />
+          				</div>
+          				<div style="clear: both">
+          				</div>	
+          </div>
+							
+							<div style="clear:both">
+								   <span class="required">*</span>
+								   required fields
+							</div>
+			
+			 		
+			
+        </rich:panel>
+
+        <div class="actionButtons">
+
+            <h:commandButton id="save"
+                          value="Save"
+                         action="#{tasksHome.managedPersist}"
+                       disabled="#{!tasksHome.wired}"
+                       rendered="#{!tasksHome.managed}"/>
+
+            <h:commandButton id="update"
+                          value="Save"
+                         action="#{tasksHome.update}"
+                       rendered="#{tasksHome.managed}"/>
+
+            <h:commandButton id="delete"
+                          value="Delete"
+                         action="#{tasksHome.remove}"
+                      immediate="true"
+                       rendered="#{tasksHome.managed}"/>
+
+            <s:button id="cancelEdit"
+                   value="Cancel"
+             propagation="end"
+                    view="/home.xhtml"
+                rendered="#{tasksHome.managed}"/>
+
+            <s:button id="cancelAdd"
+                   value="Cancel"
+             propagation="end"
+                    view="/#{empty tasksFrom ? 'home' : tasksFrom}.xhtml"
+                rendered="#{!tasksHome.managed}"/>
+
+        </div>
+    </h:form>
+</ui:define>
+
+</ui:composition>

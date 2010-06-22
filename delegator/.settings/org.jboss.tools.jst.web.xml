@@ -1,0 +1,1362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<file-systems VERSION="2.0.0" application-name="delegator"
+ model-entity="FileSystems" workspace-home="./WebContent/WEB-INF">
+ <file-system NAME="WEB-INF" location="%workspace.home%" model-entity="FileSystemFolder"/>
+ <file-system NAME="WEB-ROOT" info="Content-Type=Web"
+  location="%workspace.home%/.." model-entity="FileSystemFolder"/>
+<<<<<<< .mine
+ <file-system NAME="delegator" location="%eclipse.project%" model-entity="FileSystemFolder"/>
+ <file-system NAME="lib-commons-beanutils.jar"
+  location="C:\CS\InternetDev\workspace\delegator\WebContent\WEB-INF\lib\commons-beanutils.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-commons-digester.jar"
+  location="C:\CS\InternetDev\workspace\delegator\WebContent\WEB-INF\lib\commons-digester.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-jboss-seam-debug.jar"
+  location="C:\CS\InternetDev\workspace\delegator\WebContent\WEB-INF\lib\jboss-seam-debug.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-jboss-seam-excel.jar"
+  location="C:\CS\InternetDev\workspace\delegator\WebContent\WEB-INF\lib\jboss-seam-excel.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-jboss-seam-ioc.jar"
+  location="C:\CS\InternetDev\workspace\delegator\WebContent\WEB-INF\lib\jboss-seam-ioc.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-jboss-seam-mail.jar"
+  location="C:\CS\InternetDev\workspace\delegator\WebContent\WEB-INF\lib\jboss-seam-mail.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-jboss-seam-pdf.jar"
+  location="C:\CS\InternetDev\workspace\delegator\WebContent\WEB-INF\lib\jboss-seam-pdf.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-jboss-seam-remoting.jar"
+  location="C:\CS\InternetDev\workspace\delegator\WebContent\WEB-INF\lib\jboss-seam-remoting.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-jboss-seam-ui.jar"
+  location="C:\CS\InternetDev\workspace\delegator\WebContent\WEB-INF\lib\jboss-seam-ui.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-jsf-facelets.jar"
+  location="C:\CS\InternetDev\workspace\delegator\WebContent\WEB-INF\lib\jsf-facelets.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-jxl.jar"
+  location="C:\CS\InternetDev\workspace\delegator\WebContent\WEB-INF\lib\jxl.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-richfaces-impl.jar"
+  location="C:\CS\InternetDev\workspace\delegator\WebContent\WEB-INF\lib\richfaces-impl.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-richfaces-ui.jar"
+  location="C:\CS\InternetDev\workspace\delegator\WebContent\WEB-INF\lib\richfaces-ui.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-antlr-runtime.jar"
+  location="C:\CS\InternetDev\workspace\delegator-ear\EarContent\antlr-runtime.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-drools-compiler.jar"
+  location="C:\CS\InternetDev\workspace\delegator-ear\EarContent\drools-compiler.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-drools-core.jar"
+  location="C:\CS\InternetDev\workspace\delegator-ear\EarContent\drools-core.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-jboss-el.jar"
+  location="C:\CS\InternetDev\workspace\delegator-ear\EarContent\jboss-el.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-jboss-seam.jar"
+  location="C:\CS\InternetDev\workspace\delegator-ear\EarContent\jboss-seam.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-jbpm-jpdl.jar"
+  location="C:\CS\InternetDev\workspace\delegator-ear\EarContent\jbpm-jpdl.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-mvel14.jar"
+  location="C:\CS\InternetDev\workspace\delegator-ear\EarContent\mvel14.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-richfaces-api.jar"
+  location="C:\CS\InternetDev\workspace\delegator-ear\EarContent\richfaces-api.jar" model-entity="FileSystemJar"/>
+=======
+ <file-system NAME="lib-resources.jar"
+  location="C:\JEE\InternetDev\jdk1.6.0_13\jre\lib\resources.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-dnsns.jar"
+  location="C:\JEE\InternetDev\jdk1.6.0_13\jre\lib\ext\dnsns.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-localedata.jar"
+  location="C:\JEE\InternetDev\jdk1.6.0_13\jre\lib\ext\localedata.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-sunjce_provider.jar"
+  location="C:\JEE\InternetDev\jdk1.6.0_13\jre\lib\ext\sunjce_provider.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-sunmscapi.jar"
+  location="C:\JEE\InternetDev\jdk1.6.0_13\jre\lib\ext\sunmscapi.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-sunpkcs11.jar"
+  location="C:\JEE\InternetDev\jdk1.6.0_13\jre\lib\ext\sunpkcs11.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="delegator" location="%eclipse.project%" model-entity="FileSystemFolder"/>
+>>>>>>> .r136
+ <file-system NAME="lib-activation.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\activation.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\activation.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-antlr.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\antlr.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\antlr.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-avalon-framework.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\avalon-framework.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\avalon-framework.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-commons-logging.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\commons-logging.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\commons-logging.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-concurrent.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\concurrent.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\concurrent.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-ejb3-persistence.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\ejb3-persistence.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\ejb3-persistence.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-FastInfoset.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\FastInfoset.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\FastInfoset.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-getopt.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\getopt.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\getopt.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-hibernate-annotations.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\hibernate-annotations.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\hibernate-annotations.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jacorb.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jacorb.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jacorb.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-javassist.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\javassist.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\javassist.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jaxb-api.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jaxb-api.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jaxb-api.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jaxb-impl.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jaxb-impl.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jaxb-impl.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jaxb-xjc.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jaxb-xjc.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jaxb-xjc.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jaxws-rt.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jaxws-rt.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jaxws-rt.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jaxws-tools.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jaxws-tools.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jaxws-tools.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-aop-client.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-aop-client.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-aop-client.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-appclient.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-appclient.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-appclient.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-aspect-jdk50-client.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-aspect-jdk50-client.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-aspect-jdk50-client.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-client.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-client.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-client.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-common-core.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-common-core.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-common-core.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-deployers-client-spi.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-deployers-client-spi.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-deployers-client-spi.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-deployers-client.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-deployers-client.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-deployers-client.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-deployers-core-spi.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-deployers-core-spi.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-deployers-core-spi.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-deployers-core.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-deployers-core.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-deployers-core.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-deployers-vfs-spi.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-deployers-vfs-spi.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-deployers-vfs-spi.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-deployers-vfs.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-deployers-vfs.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-deployers-vfs.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-deployment.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-deployment.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-deployment.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-ejb3-common-client.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-ejb3-common-client.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-ejb3-common-client.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-ejb3-core-client.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-ejb3-core-client.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-ejb3-core-client.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-ejb3-ext-api-impl.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-ejb3-ext-api-impl.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-ejb3-ext-api-impl.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-ejb3-ext-api.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-ejb3-ext-api.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-ejb3-ext-api.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-ejb3-proxy-clustered-client.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-ejb3-proxy-clustered-client.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-ejb3-proxy-clustered-client.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-ejb3-proxy-impl-client.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-ejb3-proxy-impl-client.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-ejb3-proxy-impl-client.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-ejb3-proxy-spi-client.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-ejb3-proxy-spi-client.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-ejb3-proxy-spi-client.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-ejb3-security-client.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-ejb3-security-client.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-ejb3-security-client.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-ha-client.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-ha-client.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-ha-client.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-ha-legacy-client.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-ha-legacy-client.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-ha-legacy-client.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-iiop-client.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-iiop-client.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-iiop-client.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-integration.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-integration.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-integration.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-j2se.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-j2se.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-j2se.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-jaspi-api.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-jaspi-api.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-jaspi-api.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-javaee.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-javaee.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-javaee.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-jsr77-client.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-jsr77-client.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-jsr77-client.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-logging-jdk.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-logging-jdk.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-logging-jdk.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-logging-log4j.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-logging-log4j.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-logging-log4j.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-logging-spi.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-logging-spi.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-logging-spi.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-main-client.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-main-client.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-main-client.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-mdr.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-mdr.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-mdr.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-messaging-client.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-messaging-client.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-messaging-client.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-metadata.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-metadata.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-metadata.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-remoting.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-remoting.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-remoting.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-security-spi.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-security-spi.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-security-spi.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-serialization.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-serialization.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-serialization.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-srp-client.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-srp-client.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-srp-client.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-system-client.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-system-client.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-system-client.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-system-jmx-client.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-system-jmx-client.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-system-jmx-client.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-xml-binding.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jboss-xml-binding.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jboss-xml-binding.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jbossall-client.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jbossall-client.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jbossall-client.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jbosscx-client.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jbosscx-client.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jbosscx-client.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jbossjmx-ant.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jbossjmx-ant.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jbossjmx-ant.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jbossjts-integration.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jbossjts-integration.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jbossjts-integration.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jbossjts.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jbossjts.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jbossjts.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jbosssx-as-client.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jbosssx-as-client.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jbosssx-as-client.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jbosssx-client.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jbosssx-client.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jbosssx-client.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jbossws-common.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jbossws-common.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jbossws-common.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jbossws-framework.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jbossws-framework.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jbossws-framework.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jbossws-jboss50.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jbossws-jboss50.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jbossws-jboss50.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jbossws-native-client.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jbossws-native-client.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jbossws-native-client.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jbossws-native-core.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jbossws-native-core.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jbossws-native-core.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jbossws-native-jaxrpc.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jbossws-native-jaxrpc.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jbossws-native-jaxrpc.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jbossws-native-jaxws-ext.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jbossws-native-jaxws-ext.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jbossws-native-jaxws-ext.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jbossws-native-jaxws.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jbossws-native-jaxws.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jbossws-native-jaxws.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jbossws-native-saaj.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jbossws-native-saaj.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jbossws-native-saaj.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jbossws-spi.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jbossws-spi.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jbossws-spi.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jettison.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jettison.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jettison.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jmx-client.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jmx-client.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jmx-client.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jmx-invoker-adaptor-client.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jmx-invoker-adaptor-client.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jmx-invoker-adaptor-client.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jnp-client.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\jnp-client.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\jnp-client.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-log4j.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\log4j.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\log4j.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-logkit.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\logkit.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\logkit.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-mail.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\mail.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\mail.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-policy.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\policy.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\policy.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-scout.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\scout.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\scout.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-slf4j-api.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\slf4j-api.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\slf4j-api.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-slf4j-jboss-logging.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\slf4j-jboss-logging.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\slf4j-jboss-logging.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-stax-api.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\stax-api.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\stax-api.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-stax-ex.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\stax-ex.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\stax-ex.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-streambuffer.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\streambuffer.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\streambuffer.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-trove.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\trove.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\trove.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-wsdl4j.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\wsdl4j.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\wsdl4j.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-wstx.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\wstx.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\wstx.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-xmlsec.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\client\xmlsec.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\client\xmlsec.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-dom4j.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\dom4j.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\dom4j.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-aop-asintegration-core.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\jboss-aop-asintegration-core.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\jboss-aop-asintegration-core.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-aop-asintegration-jmx.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\jboss-aop-asintegration-jmx.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\jboss-aop-asintegration-jmx.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-aop-asintegration-mc.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\jboss-aop-asintegration-mc.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\jboss-aop-asintegration-mc.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-aop-deployers.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\jboss-aop-deployers.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\jboss-aop-deployers.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-aop-jboss5.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\jboss-aop-jboss5.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\jboss-aop-jboss5.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-aop-mc-int.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\jboss-aop-mc-int.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\jboss-aop-mc-int.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-aop.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\jboss-aop.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\jboss-aop.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-bootstrap.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\jboss-bootstrap.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\jboss-bootstrap.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-classloader.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\jboss-classloader.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\jboss-classloader.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-classloading-spi.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\jboss-classloading-spi.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\jboss-classloading-spi.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-classloading-vfs.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\jboss-classloading-vfs.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\jboss-classloading-vfs.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-classloading.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\jboss-classloading.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\jboss-classloading.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-dependency.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\jboss-dependency.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\jboss-dependency.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-deployers-impl.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\jboss-deployers-impl.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\jboss-deployers-impl.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-deployers-spi.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\jboss-deployers-spi.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\jboss-deployers-spi.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-deployers-structure-spi.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\jboss-deployers-structure-spi.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\jboss-deployers-structure-spi.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-jmx.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\jboss-jmx.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\jboss-jmx.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-kernel.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\jboss-kernel.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\jboss-kernel.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-logbridge.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\jboss-logbridge.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\jboss-logbridge.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-logmanager.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\jboss-logmanager.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\jboss-logmanager.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-main.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\jboss-main.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\jboss-main.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-managed.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\jboss-managed.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\jboss-managed.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-mbeans.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\jboss-mbeans.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\jboss-mbeans.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-metatype.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\jboss-metatype.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\jboss-metatype.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-profileservice-spi.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\jboss-profileservice-spi.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\jboss-profileservice-spi.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-reflect.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\jboss-reflect.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\jboss-reflect.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-system-jmx.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\jboss-system-jmx.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\jboss-system-jmx.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-system.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\jboss-system.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\jboss-system.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-vfs.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\jboss-vfs.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\jboss-vfs.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-log4j-boot.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\log4j-boot.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\log4j-boot.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-osgi.core.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\lib\osgi.core.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\lib\osgi.core.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-autonumber-plugin.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\autonumber-plugin.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\autonumber-plugin.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-bcel.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\bcel.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\bcel.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-bsf.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\bsf.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\bsf.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-bsh.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\bsh.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\bsh.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-commons-collections.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\commons-collections.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\commons-collections.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-dtdparser121.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\dtdparser121.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\dtdparser121.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-el-api.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\el-api.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\el-api.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-hibernate-commons-annotations.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\hibernate-commons-annotations.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\hibernate-commons-annotations.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-hibernate-core.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\hibernate-core.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\hibernate-core.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-hibernate-entitymanager.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\hibernate-entitymanager.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\hibernate-entitymanager.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-hibernate-jmx.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\hibernate-jmx.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\hibernate-jmx.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-hibernate-validator.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\hibernate-validator.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\hibernate-validator.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-hsqldb-plugin.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\hsqldb-plugin.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\hsqldb-plugin.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-hsqldb.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\hsqldb.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\hsqldb.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jaxen.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jaxen.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jaxen.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-common-jdbc-wrapper.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-common-jdbc-wrapper.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-common-jdbc-wrapper.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-current-invocation-aspects.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-current-invocation-aspects.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-current-invocation-aspects.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-ejb3-cache.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ejb3-cache.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ejb3-cache.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-ejb3-common.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ejb3-common.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ejb3-common.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-ejb3-core.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ejb3-core.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ejb3-core.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-ejb3-deployers.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ejb3-deployers.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ejb3-deployers.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-ejb3-endpoint.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ejb3-endpoint.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ejb3-endpoint.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-ejb3-interceptors.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ejb3-interceptors.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ejb3-interceptors.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-ejb3-mc-int.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ejb3-mc-int.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ejb3-mc-int.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-ejb3-metadata.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ejb3-metadata.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ejb3-metadata.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-ejb3-proxy-clustered.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ejb3-proxy-clustered.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ejb3-proxy-clustered.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-ejb3-proxy-impl.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ejb3-proxy-impl.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ejb3-proxy-impl.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-ejb3-proxy-spi.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ejb3-proxy-spi.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ejb3-proxy-spi.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-ejb3-security.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ejb3-security.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ejb3-security.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-ejb3-timerservice-spi.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ejb3-timerservice-spi.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ejb3-timerservice-spi.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-ejb3-transactions.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ejb3-transactions.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ejb3-transactions.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-ha-server-api.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ha-server-api.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ha-server-api.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-ha-server-cache-jbc.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ha-server-cache-jbc.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ha-server-cache-jbc.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-ha-server-cache-spi.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ha-server-cache-spi.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-ha-server-cache-spi.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-hibernate.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-hibernate.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-hibernate.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-iiop.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-iiop.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-iiop.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-jca.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-jca.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-jca.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-jmx-remoting.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-jmx-remoting.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-jmx-remoting.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-jpa-deployers.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-jpa-deployers.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-jpa-deployers.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-jsr77.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-jsr77.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-jsr77.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-jsr88.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-jsr88.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-jsr88.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-management.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-management.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-management.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-messaging-int.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-messaging-int.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-messaging-int.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-messaging.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-messaging.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-messaging.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-monitoring.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-monitoring.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-monitoring.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-negotiation.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-negotiation.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-negotiation.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-profileservice.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-profileservice.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-profileservice.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-remoting-aspects.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-remoting-aspects.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-remoting-aspects.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-security-aspects.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-security-aspects.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-security-aspects.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-srp.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-srp.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-srp.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-threads.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-threads.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-threads.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-transaction-aspects.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss-transaction-aspects.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss-transaction-aspects.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jboss.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jboss.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jbossas-remoting.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jbossas-remoting.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jbossas-remoting.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jbossha.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jbossha.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jbossha.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jbossjts-jacorb.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jbossjts-jacorb.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jbossjts-jacorb.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jbosssx-server.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jbosssx-server.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jbosssx-server.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jbosssx.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jbosssx.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jbosssx.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jbossts-common.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jbossts-common.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jbossts-common.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jbossxacml.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jbossxacml.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jbossxacml.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jmx-adaptor-plugin.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jmx-adaptor-plugin.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jmx-adaptor-plugin.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jnpserver.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jnpserver.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jnpserver.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-joesnmp.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\joesnmp.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\joesnmp.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jsp-api.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\jsp-api.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\jsp-api.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-log4j-snmp-appender.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\log4j-snmp-appender.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\log4j-snmp-appender.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-mail-plugin.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\mail-plugin.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\mail-plugin.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-properties-plugin.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\properties-plugin.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\properties-plugin.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-quartz.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\quartz.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\quartz.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-scheduler-plugin-example.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\scheduler-plugin-example.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\scheduler-plugin-example.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-scheduler-plugin.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\scheduler-plugin.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\scheduler-plugin.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-servlet-api.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\servlet-api.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\servlet-api.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-xnio-api.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\common\lib\xnio-api.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\common\lib\xnio-api.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-mysql-connector-java-5.1.7-bin.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\server\default\lib\mysql-connector-java-5.1.7-bin.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\server\default\lib\mysql-connector-java-5.1.7-bin.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-faces.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\server\default\deploy\jbossweb.sar\jsf-libs\jboss-faces.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\server\default\deploy\jbossweb.sar\jsf-libs\jboss-faces.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jsf-api.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\server\default\deploy\jbossweb.sar\jsf-libs\jsf-api.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\server\default\deploy\jbossweb.sar\jsf-libs\jsf-api.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jsf-impl.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\server\default\deploy\jbossweb.sar\jsf-libs\jsf-impl.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\server\default\deploy\jbossweb.sar\jsf-libs\jsf-impl.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-web-service.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\server\default\deploy\jbossweb.sar\jboss-web-service.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\server\default\deploy\jbossweb.sar\jboss-web-service.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-aop-aspects.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\server\default\deployers\jboss-aop-jboss5.deployer\jboss-aop-aspects.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\server\default\deployers\jboss-aop-jboss5.deployer\jboss-aop-aspects.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-aspect-library.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\server\default\deployers\jboss-aop-jboss5.deployer\jboss-aspect-library.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\server\default\deployers\jboss-aop-jboss5.deployer\jboss-aspect-library.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jrockit-pluggable-instrumentor.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\server\default\deployers\jboss-aop-jboss5.deployer\jrockit-pluggable-instrumentor.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\server\default\deployers\jboss-aop-jboss5.deployer\jrockit-pluggable-instrumentor.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-pluggable-instrumentor.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\server\default\deployers\jboss-aop-jboss5.deployer\pluggable-instrumentor.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\server\default\deployers\jboss-aop-jboss5.deployer\pluggable-instrumentor.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-ejb3-deployer.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\server\default\deployers\ejb3.deployer\jboss-ejb3-deployer.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\server\default\deployers\ejb3.deployer\jboss-ejb3-deployer.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <file-system NAME="lib-jboss-ejb3-iiop.jar"
+<<<<<<< .mine
+  location="C:\CS\InternetDev\jboss-5.1.0.GA\server\default\deployers\ejb3.deployer\jboss-ejb3-iiop.jar" model-entity="FileSystemJar"/>
+=======
+  location="C:\JEE\InternetDev\jboss-5.1.0.GA\server\default\deployers\ejb3.deployer\jboss-ejb3-iiop.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib" location="%workspace.home%/lib" model-entity="FileSystemFolder"/>
+ <file-system NAME="src" location="%workspace.home%/../../src" model-entity="FileSystemFolder"/>
+ <file-system NAME="lib-commons-beanutils.jar"
+  location="C:\JEE\workspace\delegator\WebContent\WEB-INF\lib\commons-beanutils.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-commons-digester.jar"
+  location="C:\JEE\workspace\delegator\WebContent\WEB-INF\lib\commons-digester.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-jboss-seam-debug.jar"
+  location="C:\JEE\workspace\delegator\WebContent\WEB-INF\lib\jboss-seam-debug.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-jboss-seam-excel.jar"
+  location="C:\JEE\workspace\delegator\WebContent\WEB-INF\lib\jboss-seam-excel.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-jboss-seam-ioc.jar"
+  location="C:\JEE\workspace\delegator\WebContent\WEB-INF\lib\jboss-seam-ioc.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-jboss-seam-mail.jar"
+  location="C:\JEE\workspace\delegator\WebContent\WEB-INF\lib\jboss-seam-mail.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-jboss-seam-pdf.jar"
+  location="C:\JEE\workspace\delegator\WebContent\WEB-INF\lib\jboss-seam-pdf.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-jboss-seam-remoting.jar"
+  location="C:\JEE\workspace\delegator\WebContent\WEB-INF\lib\jboss-seam-remoting.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-jboss-seam-ui.jar"
+  location="C:\JEE\workspace\delegator\WebContent\WEB-INF\lib\jboss-seam-ui.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-jsf-facelets.jar"
+  location="C:\JEE\workspace\delegator\WebContent\WEB-INF\lib\jsf-facelets.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-jxl.jar"
+  location="C:\JEE\workspace\delegator\WebContent\WEB-INF\lib\jxl.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-richfaces-impl.jar"
+  location="C:\JEE\workspace\delegator\WebContent\WEB-INF\lib\richfaces-impl.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-richfaces-ui.jar"
+  location="C:\JEE\workspace\delegator\WebContent\WEB-INF\lib\richfaces-ui.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-antlr-runtime.jar"
+  location="C:\JEE\workspace\delegator-ear\EarContent\antlr-runtime.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-drools-compiler.jar"
+  location="C:\JEE\workspace\delegator-ear\EarContent\drools-compiler.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-drools-core.jar"
+  location="C:\JEE\workspace\delegator-ear\EarContent\drools-core.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-jboss-el.jar"
+  location="C:\JEE\workspace\delegator-ear\EarContent\jboss-el.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-jboss-seam.jar"
+  location="C:\JEE\workspace\delegator-ear\EarContent\jboss-seam.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-jbpm-jpdl.jar"
+  location="C:\JEE\workspace\delegator-ear\EarContent\jbpm-jpdl.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-mvel14.jar"
+  location="C:\JEE\workspace\delegator-ear\EarContent\mvel14.jar" model-entity="FileSystemJar"/>
+ <file-system NAME="lib-richfaces-api.jar"
+  location="C:\JEE\workspace\delegator-ear\EarContent\richfaces-api.jar" model-entity="FileSystemJar"/>
+>>>>>>> .r136
+ <web SERVLET_VERSION="2.4" model-entity="JstWeb" model-path="/web.xml">
+  <module URI="/WEB-INF/faces-config.xml" model-entity="WebJSFModule"
+   model-path="/faces-config.xml" src="src" web-root="WEB-ROOT"/>
+ </web>
+</file-systems>

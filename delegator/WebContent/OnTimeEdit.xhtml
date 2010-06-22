@@ -1,0 +1,153 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:s="http://jboss.com/products/seam/taglib"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:a="http://richfaces.org/a4j"
+    xmlns:rich="http://richfaces.org/rich"
+    template="layout/template.xhtml">
+
+<ui:define name="body">
+
+    <h:form id="onTime" styleClass="edit">
+
+        <rich:panel>
+            <f:facet name="header">#{onTimeHome.managed ? 'Edit' : 'Add'} On time</f:facet>
+
+
+
+
+            <s:decorate id="counterField" template="layout/edit.xhtml">
+                <ui:define name="label">Counter</ui:define>
+                <h:inputText id="counter"
+                       required="true"
+                          value="#{onTimeHome.instance.counter}">
+                    <a:support event="onblur" reRender="counterField" bypassUpdates="true" ajaxSingle="true"/>
+                </h:inputText>
+            </s:decorate>
+
+            <div style="clear:both">
+                <span class="required">*</span>
+                required fields
+            </div>
+
+        </rich:panel>
+
+        <div class="actionButtons">
+
+            <h:commandButton id="save"
+                          value="Save"
+                         action="#{onTimeHome.persist}"
+                       disabled="#{!onTimeHome.wired}"
+                       rendered="#{!onTimeHome.managed}"/>
+
+            <h:commandButton id="update"
+                          value="Save"
+                         action="#{onTimeHome.update}"
+                       rendered="#{onTimeHome.managed}"/>
+
+            <h:commandButton id="delete"
+                          value="Delete"
+                         action="#{onTimeHome.remove}"
+                      immediate="true"
+                       rendered="#{onTimeHome.managed}"/>
+
+            <s:button id="cancelEdit"
+                   value="Cancel"
+             propagation="end"
+                    view="/OnTime.xhtml"
+                rendered="#{onTimeHome.managed}"/>
+
+            <s:button id="cancelAdd"
+                   value="Cancel"
+             propagation="end"
+                    view="/#{empty onTimeFrom ? 'OnTimeList' : onTimeFrom}.xhtml"
+                rendered="#{!onTimeHome.managed}"/>
+
+        </div>
+    </h:form>
+
+<rich:tabPanel switchType="ajax">
+
+    <rich:tab label="Employee *" labelClass="required">
+    <div class="association" id="employeeParent">
+
+        <h:outputText value="There is no employee associated with this onTime."
+                   rendered="#{onTimeHome.instance.employee == null}"/>
+
+        <rich:dataTable var="_employee"
+                   value="#{onTimeHome.instance.employee}"
+                rendered="#{onTimeHome.instance.employee != null}"
+              rowClasses="rvgRowOne,rvgRowTwo"
+                      id="employeeTable">
+            <h:column>
+                <f:facet name="header">Eid</f:facet>
+                <h:outputText value="#{_employee.eid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">User name</f:facet>
+                <h:outputText value="#{_employee.userName}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Name</f:facet>
+                <h:outputText value="#{_employee.name}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Job desc</f:facet>
+                <h:outputText value="#{_employee.jobDesc}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Lname</f:facet>
+                <h:outputText value="#{_employee.lname}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Bdate</f:facet>
+                <h:outputText value="#{_employee.bdate}">
+                    <s:convertDateTime type="date" dateStyle="short"/>
+                </h:outputText>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Address</f:facet>
+                <h:outputText value="#{_employee.address}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Email</f:facet>
+                <h:outputText value="#{_employee.email}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Phone num</f:facet>
+                <h:outputText value="#{_employee.phoneNum}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Auth</f:facet>
+                <h:outputText value="#{_employee.auth}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Password</f:facet>
+                <h:outputText value="#{_employee.password}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Late eid</f:facet>
+                <h:outputText value="#{_employee.late.eid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">On time eid</f:facet>
+                <h:outputText value="#{_employee.onTime.eid}"/>
+            </h:column>
+        </rich:dataTable>
+
+        <div class="actionButtons">
+            <s:button value="#{onTimeHome.instance.employee != null ? 'Change' : 'Select'} employee"
+                       view="/EmployeeList.xhtml">
+                <f:param name="from" value="OnTimeEdit"/>
+            </s:button>
+        </div>
+
+    </div>
+    </rich:tab>
+</rich:tabPanel>
+</ui:define>
+
+</ui:composition>

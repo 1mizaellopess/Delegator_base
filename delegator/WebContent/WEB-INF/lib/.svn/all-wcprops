@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/huji-startup-dropkick/!svn/ver/18/delegator/WebContent/WEB-INF/lib
+END
+richfaces-impl.jar
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/huji-startup-dropkick/!svn/ver/18/delegator/WebContent/WEB-INF/lib/richfaces-impl.jar
+END
+jboss-seam-ioc.jar
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/huji-startup-dropkick/!svn/ver/18/delegator/WebContent/WEB-INF/lib/jboss-seam-ioc.jar
+END
+jsf-facelets.jar
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/huji-startup-dropkick/!svn/ver/18/delegator/WebContent/WEB-INF/lib/jsf-facelets.jar
+END
+commons-digester.jar
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/huji-startup-dropkick/!svn/ver/18/delegator/WebContent/WEB-INF/lib/commons-digester.jar
+END
+richfaces-ui.jar
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/huji-startup-dropkick/!svn/ver/18/delegator/WebContent/WEB-INF/lib/richfaces-ui.jar
+END
+jboss-seam-pdf.jar
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/huji-startup-dropkick/!svn/ver/18/delegator/WebContent/WEB-INF/lib/jboss-seam-pdf.jar
+END
+jboss-seam-debug.jar
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/huji-startup-dropkick/!svn/ver/18/delegator/WebContent/WEB-INF/lib/jboss-seam-debug.jar
+END
+jboss-seam-remoting.jar
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/huji-startup-dropkick/!svn/ver/18/delegator/WebContent/WEB-INF/lib/jboss-seam-remoting.jar
+END
+commons-beanutils.jar
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/huji-startup-dropkick/!svn/ver/18/delegator/WebContent/WEB-INF/lib/commons-beanutils.jar
+END
+jboss-seam-ui.jar
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/huji-startup-dropkick/!svn/ver/18/delegator/WebContent/WEB-INF/lib/jboss-seam-ui.jar
+END
+jxl.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/huji-startup-dropkick/!svn/ver/18/delegator/WebContent/WEB-INF/lib/jxl.jar
+END
+jboss-seam-excel.jar
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/huji-startup-dropkick/!svn/ver/18/delegator/WebContent/WEB-INF/lib/jboss-seam-excel.jar
+END
+jboss-seam-mail.jar
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/huji-startup-dropkick/!svn/ver/18/delegator/WebContent/WEB-INF/lib/jboss-seam-mail.jar
+END

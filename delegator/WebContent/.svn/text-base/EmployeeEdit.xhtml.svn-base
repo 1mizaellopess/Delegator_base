@@ -1,0 +1,467 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:s="http://jboss.com/products/seam/taglib"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:a="http://richfaces.org/a4j"
+    xmlns:rich="http://richfaces.org/rich"
+    template="layout/template.xhtml">
+
+<ui:define name="body">
+
+    <h:form id="employee" styleClass="edit">
+
+        <rich:panel>
+            <f:facet name="header">#{employeeHome.managed ? 'Edit' : 'Add'} Employee</f:facet>
+
+
+            <s:decorate id="eidField" template="layout/edit.xhtml">
+                <ui:define name="label">Eid</ui:define>
+                <h:inputText id="eid"
+                       required="true"
+                       disabled="#{employeeHome.managed}"
+                          value="#{employeeHome.instance.eid}">
+                    <a:support event="onblur" reRender="eidField" bypassUpdates="true" ajaxSingle="true"/>
+                </h:inputText>
+            </s:decorate>
+
+
+            <s:decorate id="userNameField" template="layout/edit.xhtml">
+                <ui:define name="label">User name</ui:define>
+                <h:inputTextarea id="userName"
+                               cols="80"
+                               rows="3"
+                           required="true"
+                              value="#{employeeHome.instance.userName}"/>
+            </s:decorate>
+
+
+            <s:decorate id="nameField" template="layout/edit.xhtml">
+                <ui:define name="label">Name</ui:define>
+                <h:inputTextarea id="name"
+                               cols="80"
+                               rows="3"
+                           required="true"
+                              value="#{employeeHome.instance.name}"/>
+            </s:decorate>
+
+
+            <s:decorate id="jobDescField" template="layout/edit.xhtml">
+                <ui:define name="label">Job desc</ui:define>
+                <h:inputTextarea id="jobDesc"
+                               cols="80"
+                               rows="3"
+                           required="true"
+                              value="#{employeeHome.instance.jobDesc}"/>
+            </s:decorate>
+
+
+            <s:decorate id="lnameField" template="layout/edit.xhtml">
+                <ui:define name="label">Lname</ui:define>
+                <h:inputTextarea id="lname"
+                               cols="80"
+                               rows="3"
+                              value="#{employeeHome.instance.lname}"/>
+            </s:decorate>
+
+
+            <s:decorate id="bdateField" template="layout/edit.xhtml">
+                <ui:define name="label">Bdate</ui:define>
+                <rich:calendar id="bdate"
+                          value="#{employeeHome.instance.bdate}" datePattern="MM/dd/yyyy" />
+            </s:decorate>
+
+
+            <s:decorate id="addressField" template="layout/edit.xhtml">
+                <ui:define name="label">Address</ui:define>
+                <h:inputTextarea id="address"
+                               cols="80"
+                               rows="3"
+                              value="#{employeeHome.instance.address}"/>
+            </s:decorate>
+
+
+            <s:decorate id="emailField" template="layout/edit.xhtml">
+                <ui:define name="label">Email</ui:define>
+                <h:inputTextarea id="email"
+                               cols="80"
+                               rows="3"
+                              value="#{employeeHome.instance.email}"/>
+            </s:decorate>
+
+
+            <s:decorate id="phoneNumField" template="layout/edit.xhtml">
+                <ui:define name="label">Phone num</ui:define>
+                <h:inputText id="phoneNum"
+                          value="#{employeeHome.instance.phoneNum}">
+                    <a:support event="onblur" reRender="phoneNumField" bypassUpdates="true" ajaxSingle="true"/>
+                </h:inputText>
+            </s:decorate>
+
+
+            <s:decorate id="authField" template="layout/edit.xhtml">
+                <ui:define name="label">Auth</ui:define>
+                <h:inputText id="auth"
+                       required="true"
+                           size="15"
+                      maxlength="15"
+                          value="#{employeeHome.instance.auth}">
+                    <a:support event="onblur" reRender="authField" bypassUpdates="true" ajaxSingle="true"/>
+                </h:inputText>
+            </s:decorate>
+
+
+            <s:decorate id="passwordField" template="layout/edit.xhtml">
+                <ui:define name="label">Password</ui:define>
+                <h:inputText id="password"
+                          value="#{employeeHome.instance.password}">
+                    <a:support event="onblur" reRender="passwordField" bypassUpdates="true" ajaxSingle="true"/>
+                </h:inputText>
+            </s:decorate>
+
+
+
+
+
+
+
+
+
+
+
+            <div style="clear:both">
+                <span class="required">*</span>
+                required fields
+            </div>
+
+        </rich:panel>
+
+        <div class="actionButtons">
+
+            <h:commandButton id="save"
+                          value="Save"
+                         action="#{employeeHome.persist}"
+                       disabled="#{!employeeHome.wired}"
+                       rendered="#{!employeeHome.managed}"/>
+
+            <h:commandButton id="update"
+                          value="Save"
+                         action="#{employeeHome.update}"
+                       rendered="#{employeeHome.managed}"/>
+
+            <h:commandButton id="delete"
+                          value="Delete"
+                         action="#{employeeHome.remove}"
+                      immediate="true"
+                       rendered="#{employeeHome.managed}"/>
+
+            <s:button id="cancelEdit"
+                   value="Cancel"
+             propagation="end"
+                    view="/Employee.xhtml"
+                rendered="#{employeeHome.managed}"/>
+
+            <s:button id="cancelAdd"
+                   value="Cancel"
+             propagation="end"
+                    view="/#{empty employeeFrom ? 'EmployeeList' : employeeFrom}.xhtml"
+                rendered="#{!employeeHome.managed}"/>
+
+        </div>
+    </h:form>
+
+<rich:tabPanel switchType="ajax">
+
+    <rich:tab label="Taskses">
+        <h:form styleClass="association" id="tasksesChildren">
+
+            <h:outputText value="There are no taskses associated with this employee."
+                       rendered="#{empty employeeHome.taskses}"/>
+
+            <rich:dataTable value="#{employeeHome.taskses}"
+                           var="_tasks"
+                      rendered="#{not empty employeeHome.taskses}"
+                    rowClasses="rvgRowOne,rvgRowTwo"
+                            id="tasksesTable">
+                <rich:column sortBy="#{_tasks.tid}">
+                    <f:facet name="header">Tid</f:facet>
+                    <h:outputText value="#{_tasks.tid}"/>
+                </rich:column>
+                <rich:column sortBy="#{_tasks.cdate}">
+                    <f:facet name="header">Cdate</f:facet>
+                    <h:outputText value="#{_tasks.cdate}">
+                        <s:convertDateTime type="both" dateStyle="short"/>
+                    </h:outputText>
+                </rich:column>
+                <rich:column sortBy="#{_tasks.edate}">
+                    <f:facet name="header">Edate</f:facet>
+                    <h:outputText value="#{_tasks.edate}">
+                        <s:convertDateTime type="both" dateStyle="short"/>
+                    </h:outputText>
+                </rich:column>
+                <rich:column sortBy="#{_tasks.finishedDate}">
+                    <f:facet name="header">Finished date</f:facet>
+                    <h:outputText value="#{_tasks.finishedDate}">
+                        <s:convertDateTime type="both" dateStyle="short"/>
+                    </h:outputText>
+                </rich:column>
+                <rich:column sortBy="#{_tasks.title}">
+                    <f:facet name="header">Title</f:facet>
+                    <h:outputText value="#{_tasks.title}"/>
+                </rich:column>
+                <rich:column sortBy="#{_tasks.description}">
+                    <f:facet name="header">Description</f:facet>
+                    <h:outputText value="#{_tasks.description}"/>
+                </rich:column>
+                <rich:column sortBy="#{_tasks.attachment}">
+                    <f:facet name="header">Attachment</f:facet>
+                    <h:outputText value="#{_tasks.attachment}"/>
+                </rich:column>
+                <rich:column sortBy="#{_tasks.status}">
+                    <f:facet name="header">Status</f:facet>
+                    <h:outputText value="#{_tasks.status}"/>
+                </rich:column>
+                <rich:column sortBy="#{_tasks.flagged}">
+                    <f:facet name="header">Flagged</f:facet>
+                    <h:outputText value="#{_tasks.flagged}"/>
+                </rich:column>
+                <rich:column sortBy="#{_tasks.delegated}">
+                    <f:facet name="header">Delegated</f:facet>
+                    <h:outputText value="#{_tasks.delegated}"/>
+                </rich:column>
+            </rich:dataTable>
+
+        </h:form>
+
+        <f:subview rendered="#{employeeHome.managed}" id="taskses">
+        <div class="actionButtons">
+            <s:button id="addtasks"
+                   value="Add tasks"
+                    view="/TasksEdit.xhtml"
+             propagation="none">
+                 <f:param name="employeeEid"
+                         value="#{employeeHome.instance.eid}"/>
+                 <f:param name="tasksFrom" value="Employee"/>
+            </s:button>
+        </div>
+        </f:subview>
+    </rich:tab>
+
+    <rich:tab label="Late">
+    <div class="association" id="lateParent">
+
+        <h:outputText value="There is no late associated with this employee."
+                   rendered="#{employeeHome.instance.late == null}"/>
+
+        <rich:dataTable var="_late"
+                   value="#{employeeHome.instance.late}"
+                rendered="#{employeeHome.instance.late != null}"
+              rowClasses="rvgRowOne,rvgRowTwo"
+                      id="lateTable">
+            <h:column>
+                <f:facet name="header">Eid</f:facet>
+                <h:outputText value="#{_late.eid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Employee eid</f:facet>
+                <h:outputText value="#{_late.employee.eid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Counter</f:facet>
+                <h:outputText value="#{_late.counter}"/>
+            </h:column>
+        </rich:dataTable>
+
+        <div class="actionButtons">
+            <s:button value="#{employeeHome.instance.late != null ? 'Change' : 'Select'} late"
+                       view="/LateList.xhtml">
+                <f:param name="from" value="EmployeeEdit"/>
+            </s:button>
+        </div>
+
+    </div>
+    </rich:tab>
+
+    <rich:tab label="On time">
+    <div class="association" id="onTimeParent">
+
+        <h:outputText value="There is no onTime associated with this employee."
+                   rendered="#{employeeHome.instance.onTime == null}"/>
+
+        <rich:dataTable var="_onTime"
+                   value="#{employeeHome.instance.onTime}"
+                rendered="#{employeeHome.instance.onTime != null}"
+              rowClasses="rvgRowOne,rvgRowTwo"
+                      id="onTimeTable">
+            <h:column>
+                <f:facet name="header">Eid</f:facet>
+                <h:outputText value="#{_onTime.eid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Employee eid</f:facet>
+                <h:outputText value="#{_onTime.employee.eid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Counter</f:facet>
+                <h:outputText value="#{_onTime.counter}"/>
+            </h:column>
+        </rich:dataTable>
+
+        <div class="actionButtons">
+            <s:button value="#{employeeHome.instance.onTime != null ? 'Change' : 'Select'} onTime"
+                       view="/OnTimeList.xhtml">
+                <f:param name="from" value="EmployeeEdit"/>
+            </s:button>
+        </div>
+
+    </div>
+    </rich:tab>
+
+    <rich:tab label="Archiveds">
+        <h:form styleClass="association" id="archivedsChildren">
+
+            <h:outputText value="There are no archiveds associated with this employee."
+                       rendered="#{empty employeeHome.archiveds}"/>
+
+            <rich:dataTable value="#{employeeHome.archiveds}"
+                           var="_archived"
+                      rendered="#{not empty employeeHome.archiveds}"
+                    rowClasses="rvgRowOne,rvgRowTwo"
+                            id="archivedsTable">
+                <rich:column sortBy="#{_archived.tid}">
+                    <f:facet name="header">Tid</f:facet>
+                    <h:outputText value="#{_archived.tid}"/>
+                </rich:column>
+                <rich:column sortBy="#{_archived.cdate}">
+                    <f:facet name="header">Cdate</f:facet>
+                    <h:outputText value="#{_archived.cdate}">
+                        <s:convertDateTime type="both" dateStyle="short"/>
+                    </h:outputText>
+                </rich:column>
+                <rich:column sortBy="#{_archived.edate}">
+                    <f:facet name="header">Edate</f:facet>
+                    <h:outputText value="#{_archived.edate}">
+                        <s:convertDateTime type="both" dateStyle="short"/>
+                    </h:outputText>
+                </rich:column>
+                <rich:column sortBy="#{_archived.title}">
+                    <f:facet name="header">Title</f:facet>
+                    <h:outputText value="#{_archived.title}"/>
+                </rich:column>
+                <rich:column sortBy="#{_archived.description}">
+                    <f:facet name="header">Description</f:facet>
+                    <h:outputText value="#{_archived.description}"/>
+                </rich:column>
+                <rich:column sortBy="#{_archived.attachment}">
+                    <f:facet name="header">Attachment</f:facet>
+                    <h:outputText value="#{_archived.attachment}"/>
+                </rich:column>
+                <rich:column sortBy="#{_archived.status}">
+                    <f:facet name="header">Status</f:facet>
+                    <h:outputText value="#{_archived.status}"/>
+                </rich:column>
+                <rich:column sortBy="#{_archived.parallel}">
+                    <f:facet name="header">Parallel</f:facet>
+                    <h:outputText value="#{_archived.parallel}"/>
+                </rich:column>
+            </rich:dataTable>
+
+        </h:form>
+
+        <f:subview rendered="#{employeeHome.managed}" id="archiveds">
+        <div class="actionButtons">
+            <s:button id="addarchived"
+                   value="Add archived"
+                    view="/ArchivedEdit.xhtml"
+             propagation="none">
+                 <f:param name="employeeEid"
+                         value="#{employeeHome.instance.eid}"/>
+                 <f:param name="archivedFrom" value="Employee"/>
+            </s:button>
+        </div>
+        </f:subview>
+    </rich:tab>
+
+    <rich:tab label="Divisionses_1">
+        <h:form styleClass="association" id="divisionses_1Children">
+
+            <h:outputText value="There are no divisionses_1 associated with this employee."
+                       rendered="#{empty employeeHome.divisionses_1}"/>
+
+            <rich:dataTable value="#{employeeHome.divisionses_1}"
+                           var="_divisions"
+                      rendered="#{not empty employeeHome.divisionses_1}"
+                    rowClasses="rvgRowOne,rvgRowTwo"
+                            id="divisionses_1Table">
+                <rich:column sortBy="#{_divisions.divId}">
+                    <f:facet name="header">Div id</f:facet>
+                    <h:outputText value="#{_divisions.divId}"/>
+                </rich:column>
+                <rich:column sortBy="#{_divisions.name}">
+                    <f:facet name="header">Name</f:facet>
+                    <h:outputText value="#{_divisions.name}"/>
+                </rich:column>
+            </rich:dataTable>
+
+        </h:form>
+
+        <f:subview rendered="#{employeeHome.managed}" id="divisionses_1">
+        <div class="actionButtons">
+            <s:button id="adddivisions"
+                   value="Add divisions"
+                    view="/DivisionsEdit.xhtml"
+             propagation="none">
+                 <f:param name="employeeEid"
+                         value="#{employeeHome.instance.eid}"/>
+                 <f:param name="divisionsFrom" value="Employee"/>
+            </s:button>
+        </div>
+        </f:subview>
+    </rich:tab>
+
+    <rich:tab label="Done bies">
+        <h:form styleClass="association" id="doneBiesChildren">
+
+            <h:outputText value="There are no doneBies associated with this employee."
+                       rendered="#{empty employeeHome.doneBies}"/>
+
+            <rich:dataTable value="#{employeeHome.doneBies}"
+                           var="_doneBy"
+                      rendered="#{not empty employeeHome.doneBies}"
+                    rowClasses="rvgRowOne,rvgRowTwo"
+                            id="doneBiesTable">
+                <rich:column sortBy="#{_doneBy.id.tid}">
+                    <f:facet name="header">Tid</f:facet>
+                    <h:outputText value="#{_doneBy.id.tid}"/>
+                </rich:column>
+                <rich:column sortBy="#{_doneBy.id.eid}">
+                    <f:facet name="header">Eid</f:facet>
+                    <h:outputText value="#{_doneBy.id.eid}"/>
+                </rich:column>
+                <rich:column sortBy="#{_doneBy.changed}">
+                    <f:facet name="header">Changed</f:facet>
+                    <h:outputText value="#{_doneBy.changed}"/>
+                </rich:column>
+            </rich:dataTable>
+
+        </h:form>
+
+        <f:subview rendered="#{employeeHome.managed}" id="doneBies">
+        <div class="actionButtons">
+            <s:button id="adddoneBy"
+                   value="Add doneBy"
+                    view="/DoneByEdit.xhtml"
+             propagation="none">
+                 <f:param name="employeeEid"
+                         value="#{employeeHome.instance.eid}"/>
+                 <f:param name="doneByFrom" value="Employee"/>
+            </s:button>
+        </div>
+        </f:subview>
+    </rich:tab>
+</rich:tabPanel>
+</ui:define>
+
+</ui:composition>

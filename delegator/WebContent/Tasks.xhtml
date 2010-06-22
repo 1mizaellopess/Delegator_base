@@ -1,0 +1,415 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:s="http://jboss.com/products/seam/taglib"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:rich="http://richfaces.org/rich"
+    template="layout/template.xhtml">
+
+<ui:define name="body">
+
+    <rich:panel>
+        <f:facet name="header">Tasks Details</f:facet>
+
+
+        <s:decorate id="cdate" template="layout/display.xhtml" rendered="false">
+            <ui:define name="label">Cdate</ui:define>
+            <h:outputText value="#{tasksHome.instance.cdate}">
+                <s:convertDateTime type="both" dateStyle="short"/>
+            </h:outputText>
+        </s:decorate>
+
+        <s:decorate id="edate" template="layout/display.xhtml">
+            <ui:define name="label">Edate</ui:define>
+            <h:outputText value="#{tasksHome.instance.edate}">
+                <s:convertDateTime type="both" dateStyle="short"/>
+            </h:outputText>
+        </s:decorate>
+
+        <s:decorate id="finishedDate" template="layout/display.xhtml">
+            <ui:define name="label">Finished date</ui:define>
+            <h:outputText value="#{tasksHome.instance.finishedDate}">
+                <s:convertDateTime type="both" dateStyle="short"/>
+            </h:outputText>
+        </s:decorate>
+
+        <s:decorate id="title" template="layout/display.xhtml">
+            <ui:define name="label">Title</ui:define>
+            <h:outputText value="#{tasksHome.instance.title}"/>
+        </s:decorate>
+
+        <s:decorate id="description" template="layout/display.xhtml">
+            <ui:define name="label">Description</ui:define>
+            <h:outputText value="#{tasksHome.instance.description}"/>
+        </s:decorate>
+
+        <s:decorate id="attachment" template="layout/display.xhtml">
+            <ui:define name="label">Attachment</ui:define>
+            <h:outputText value="#{tasksHome.instance.attachment}"/>
+        </s:decorate>
+
+        <s:decorate id="status" template="layout/display.xhtml">
+            <ui:define name="label">Status</ui:define>
+            <h:outputText value="#{tasksHome.instance.status}"/>
+        </s:decorate>
+
+        <s:decorate id="flagged" template="layout/display.xhtml">
+            <ui:define name="label">Flagged</ui:define>
+            <h:outputText value="#{tasksHome.instance.flagged}"/>
+        </s:decorate>
+
+        <s:decorate id="delegated" template="layout/display.xhtml">
+            <ui:define name="label">Delegated</ui:define>
+            <h:outputText value="#{tasksHome.instance.delegated}"/>
+        </s:decorate>
+
+        <div style="clear:both"/>
+
+    </rich:panel>
+
+    <div class="actionButtons">
+
+        <s:button view="/TasksEdit.xhtml"
+                    id="edit"
+                 value="Edit"/>
+
+        <s:button view="/#{empty tasksFrom ? 'TasksList' : tasksFrom}.xhtml"
+                    id="done"
+                 value="Done"/>
+
+    </div>
+
+    <rich:tabPanel switchType="ajax">
+
+    <rich:tab>
+        <f:facet name="label">
+            <h:panelGroup><h:graphicImage value="/img/manytoone.gif" style="vertical-align: middle; padding-right: 4px;"/>Employee</h:panelGroup>
+        </f:facet>
+    <div class="association" id="employeeParent">
+
+        <h:outputText value="There is no employee associated with this tasks."
+                   rendered="#{tasksHome.instance.employee == null}"/>
+
+        <rich:dataTable var="_employee"
+                   value="#{tasksHome.instance.employee}"
+                rendered="#{tasksHome.instance.employee != null}"
+              rowClasses="rvgRowOne,rvgRowTwo"
+                      id="employeeTable">
+            <h:column>
+                <f:facet name="header">Eid</f:facet>
+                <h:outputText value="#{_employee.eid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">User name</f:facet>
+                <h:outputText value="#{_employee.userName}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Name</f:facet>
+                <h:outputText value="#{_employee.name}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Job desc</f:facet>
+                <h:outputText value="#{_employee.jobDesc}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Lname</f:facet>
+                <h:outputText value="#{_employee.lname}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Bdate</f:facet>
+                <h:outputText value="#{_employee.bdate}">
+                    <s:convertDateTime type="date" dateStyle="short"/>
+                </h:outputText>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Address</f:facet>
+                <h:outputText value="#{_employee.address}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Email</f:facet>
+                <h:outputText value="#{_employee.email}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Phone num</f:facet>
+                <h:outputText value="#{_employee.phoneNum}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Auth</f:facet>
+                <h:outputText value="#{_employee.auth}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Password</f:facet>
+                <h:outputText value="#{_employee.password}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Late eid</f:facet>
+                <h:outputText value="#{_employee.late.eid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">On time eid</f:facet>
+                <h:outputText value="#{_employee.onTime.eid}"/>
+            </h:column>
+            <h:column styleClass="action">
+                <f:facet name="header">Action</f:facet>
+                <s:link id="viewemployee"
+                     value="View"
+                      view="/Employee.xhtml">
+                    <f:param name="employeeEid"
+                           value="#{_employee.eid}"/>
+                </s:link>
+            </h:column>
+        </rich:dataTable>
+
+    </div>
+    </rich:tab>
+
+    <rich:tab>
+        <f:facet name="label">
+            <h:panelGroup><h:graphicImage value="/img/onetomany.gif" style="vertical-align: middle; padding-right: 4px;"/>Tasks cs for root task id</h:panelGroup>
+        </f:facet>
+    <h:form styleClass="association" id="tasksCsForRootTaskIdChildren">
+
+        <h:outputText value="There are no tasksCsForRootTaskId associated with this tasks."
+                   rendered="#{empty tasksHome.tasksCsForRootTaskId}"/>
+
+        <rich:dataTable value="#{tasksHome.tasksCsForRootTaskId}"
+                       var="_tasksC"
+                  rendered="#{not empty tasksHome.tasksCsForRootTaskId}"
+                rowClasses="rvgRowOne,rvgRowTwo"
+                        id="tasksCsForRootTaskIdTable">
+            <rich:column sortBy="#{_tasksC.tid}">
+                <f:facet name="header">Tid</f:facet>
+                <h:outputText value="#{_tasksC.tid}"/>
+            </rich:column>
+            <rich:column sortBy="#{_tasksC.parallel}">
+                <f:facet name="header">Parallel</f:facet>
+                <h:outputText value="#{_tasksC.parallel}"/>
+            </rich:column>
+            <h:column>
+                <f:facet name="header">Action</f:facet>
+                <s:link id="selecttasksC"
+                     value="Select"
+                      view="/TasksC.xhtml">
+                    <f:param name="tasksCTid"
+                            value="#{_tasksC.tid}"/>
+                    <f:param name="tasksCFrom" value="Tasks"/>
+                </s:link>
+            </h:column>
+        </rich:dataTable>
+
+    </h:form>
+
+    <div class="actionButtons">
+        <s:button
+               value="Add tasksC"
+                view="/TasksCEdit.xhtml">
+            <f:param name="tasksTid"
+                    value="#{tasksHome.instance.tid}"/>
+            <f:param name="tasksCFrom" value="Tasks"/>
+        </s:button>
+    </div>
+    </rich:tab>
+
+    <rich:tab>
+        <f:facet name="label">
+            <h:panelGroup><h:graphicImage value="/img/onetomany.gif" style="vertical-align: middle; padding-right: 4px;"/>Done bies</h:panelGroup>
+        </f:facet>
+    <h:form styleClass="association" id="doneBiesChildren">
+
+        <h:outputText value="There are no doneBies associated with this tasks."
+                   rendered="#{empty tasksHome.doneBies}"/>
+
+        <rich:dataTable value="#{tasksHome.doneBies}"
+                       var="_doneBy"
+                  rendered="#{not empty tasksHome.doneBies}"
+                rowClasses="rvgRowOne,rvgRowTwo"
+                        id="doneBiesTable">
+            <rich:column sortBy="#{_doneBy.id.tid}">
+                <f:facet name="header">Tid</f:facet>
+                <h:outputText value="#{_doneBy.id.tid}"/>
+            </rich:column>
+            <rich:column sortBy="#{_doneBy.id.eid}">
+                <f:facet name="header">Eid</f:facet>
+                <h:outputText value="#{_doneBy.id.eid}"/>
+            </rich:column>
+            <rich:column sortBy="#{_doneBy.changed}">
+                <f:facet name="header">Changed</f:facet>
+                <h:outputText value="#{_doneBy.changed}"/>
+            </rich:column>
+            <h:column>
+                <f:facet name="header">Action</f:facet>
+                <s:link id="selectdoneBy"
+                     value="Select"
+                      view="/DoneBy.xhtml">
+                    <f:param name="doneByTid"
+                            value="#{_doneBy.id.tid}"/>
+                    <f:param name="doneByEid"
+                            value="#{_doneBy.id.eid}"/>
+                    <f:param name="doneByFrom" value="Tasks"/>
+                </s:link>
+            </h:column>
+        </rich:dataTable>
+
+    </h:form>
+
+    <div class="actionButtons">
+        <s:button
+               value="Add doneBy"
+                view="/DoneByEdit.xhtml">
+            <f:param name="tasksTid"
+                    value="#{tasksHome.instance.tid}"/>
+            <f:param name="doneByFrom" value="Tasks"/>
+        </s:button>
+    </div>
+    </rich:tab>
+
+    <rich:tab>
+        <f:facet name="label">
+            <h:panelGroup><h:graphicImage value="/img/onetomany.gif" style="vertical-align: middle; padding-right: 4px;"/>Tasks cs for parent task id</h:panelGroup>
+        </f:facet>
+    <h:form styleClass="association" id="tasksCsForParentTaskIdChildren">
+
+        <h:outputText value="There are no tasksCsForParentTaskId associated with this tasks."
+                   rendered="#{empty tasksHome.tasksCsForParentTaskId}"/>
+
+        <rich:dataTable value="#{tasksHome.tasksCsForParentTaskId}"
+                       var="_tasksC"
+                  rendered="#{not empty tasksHome.tasksCsForParentTaskId}"
+                rowClasses="rvgRowOne,rvgRowTwo"
+                        id="tasksCsForParentTaskIdTable">
+            <rich:column sortBy="#{_tasksC.tid}">
+                <f:facet name="header">Tid</f:facet>
+                <h:outputText value="#{_tasksC.tid}"/>
+            </rich:column>
+            <rich:column sortBy="#{_tasksC.parallel}">
+                <f:facet name="header">Parallel</f:facet>
+                <h:outputText value="#{_tasksC.parallel}"/>
+            </rich:column>
+            <h:column>
+                <f:facet name="header">Action</f:facet>
+                <s:link id="selecttasksC"
+                     value="Select"
+                      view="/TasksC.xhtml">
+                    <f:param name="tasksCTid"
+                            value="#{_tasksC.tid}"/>
+                    <f:param name="tasksCFrom" value="Tasks"/>
+                </s:link>
+            </h:column>
+        </rich:dataTable>
+
+    </h:form>
+
+    <div class="actionButtons">
+        <s:button
+               value="Add tasksC"
+                view="/TasksCEdit.xhtml">
+            <f:param name="tasksTid"
+                    value="#{tasksHome.instance.tid}"/>
+            <f:param name="tasksCFrom" value="Tasks"/>
+        </s:button>
+    </div>
+    </rich:tab>
+
+    <rich:tab>
+        <f:facet name="label">
+            <h:panelGroup><h:graphicImage value="/img/manytoone.gif" style="vertical-align: middle; padding-right: 4px;"/>Tasks c by tid</h:panelGroup>
+        </f:facet>
+    <div class="association" id="tasksCByTidParent">
+
+        <h:outputText value="There is no tasksCByTid associated with this tasks."
+                   rendered="#{tasksHome.instance.tasksCByTid == null}"/>
+
+        <rich:dataTable var="_tasksC"
+                   value="#{tasksHome.instance.tasksCByTid}"
+                rendered="#{tasksHome.instance.tasksCByTid != null}"
+              rowClasses="rvgRowOne,rvgRowTwo"
+                      id="tasksCByTidTable">
+            <h:column>
+                <f:facet name="header">Tid</f:facet>
+                <h:outputText value="#{_tasksC.tid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Tasks by tid tid</f:facet>
+                <h:outputText value="#{_tasksC.tasksByTid.tid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Tasks by parent task id tid</f:facet>
+                <h:outputText value="#{_tasksC.tasksByParentTaskId.tid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Tasks by root task id tid</f:facet>
+                <h:outputText value="#{_tasksC.tasksByRootTaskId.tid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Parallel</f:facet>
+                <h:outputText value="#{_tasksC.parallel}"/>
+            </h:column>
+            <h:column styleClass="action">
+                <f:facet name="header">Action</f:facet>
+                <s:link id="viewtasksC"
+                     value="View"
+                      view="/TasksC.xhtml">
+                    <f:param name="tasksCTid"
+                           value="#{_tasksC.tid}"/>
+                </s:link>
+            </h:column>
+        </rich:dataTable>
+
+    </div>
+    </rich:tab>
+
+    <rich:tab>
+        <f:facet name="label">
+            <h:panelGroup><h:graphicImage value="/img/manytoone.gif" style="vertical-align: middle; padding-right: 4px;"/>Updates</h:panelGroup>
+        </f:facet>
+    <div class="association" id="updatesParent">
+
+        <h:outputText value="There is no updates associated with this tasks."
+                   rendered="#{tasksHome.instance.updates == null}"/>
+
+        <rich:dataTable var="_updates"
+                   value="#{tasksHome.instance.updates}"
+                rendered="#{tasksHome.instance.updates != null}"
+              rowClasses="rvgRowOne,rvgRowTwo"
+                      id="updatesTable">
+            <h:column>
+                <f:facet name="header">Tid</f:facet>
+                <h:outputText value="#{_updates.tid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Tasks tid</f:facet>
+                <h:outputText value="#{_updates.tasks.tid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Updates</f:facet>
+                <h:outputText value="#{_updates.updates}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Change time</f:facet>
+                <h:outputText value="#{_updates.changeTime}">
+                    <s:convertDateTime type="both" dateStyle="short"/>
+                </h:outputText>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Memo</f:facet>
+                <h:outputText value="#{_updates.memo}"/>
+            </h:column>
+            <h:column styleClass="action">
+                <f:facet name="header">Action</f:facet>
+                <s:link id="viewupdates"
+                     value="View"
+                      view="/Updates.xhtml">
+                    <f:param name="updatesTid"
+                           value="#{_updates.tid}"/>
+                </s:link>
+            </h:column>
+        </rich:dataTable>
+
+    </div>
+    </rich:tab>
+</rich:tabPanel>
+</ui:define>
+
+</ui:composition>

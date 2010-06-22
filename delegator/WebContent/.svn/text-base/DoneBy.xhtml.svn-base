@@ -1,0 +1,218 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:s="http://jboss.com/products/seam/taglib"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:rich="http://richfaces.org/rich"
+    template="layout/template.xhtml">
+
+<ui:define name="body">
+
+    <rich:panel>
+        <f:facet name="header">Done by Details</f:facet>
+
+        <s:decorate id="tid" template="layout/display.xhtml">
+            <ui:define name="label">Tid</ui:define>
+            <h:outputText value="#{doneByHome.instance.id.tid}"/>
+        </s:decorate>
+        <s:decorate id="eid" template="layout/display.xhtml">
+            <ui:define name="label">Eid</ui:define>
+            <h:outputText value="#{doneByHome.instance.id.eid}"/>
+        </s:decorate>
+
+        <s:decorate id="changed" template="layout/display.xhtml">
+            <ui:define name="label">Changed</ui:define>
+            <h:outputText value="#{doneByHome.instance.changed}"/>
+        </s:decorate>
+
+        <div style="clear:both"/>
+
+    </rich:panel>
+
+    <div class="actionButtons">
+
+        <s:button view="/DoneByEdit.xhtml"
+                    id="edit"
+                 value="Edit"/>
+
+        <s:button view="/#{empty doneByFrom ? 'DoneByList' : doneByFrom}.xhtml"
+                    id="done"
+                 value="Done"/>
+
+    </div>
+
+    <rich:tabPanel switchType="ajax">
+
+    <rich:tab>
+        <f:facet name="label">
+            <h:panelGroup><h:graphicImage value="/img/manytoone.gif" style="vertical-align: middle; padding-right: 4px;"/>Tasks</h:panelGroup>
+        </f:facet>
+    <div class="association" id="tasksParent">
+
+        <h:outputText value="There is no tasks associated with this doneBy."
+                   rendered="#{doneByHome.instance.tasks == null}"/>
+
+        <rich:dataTable var="_tasks"
+                   value="#{doneByHome.instance.tasks}"
+                rendered="#{doneByHome.instance.tasks != null}"
+              rowClasses="rvgRowOne,rvgRowTwo"
+                      id="tasksTable">
+            <h:column>
+                <f:facet name="header">Tid</f:facet>
+                <h:outputText value="#{_tasks.tid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Employee eid</f:facet>
+                <h:outputText value="#{_tasks.employee.eid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Cdate</f:facet>
+                <h:outputText value="#{_tasks.cdate}">
+                    <s:convertDateTime type="both" dateStyle="short"/>
+                </h:outputText>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Edate</f:facet>
+                <h:outputText value="#{_tasks.edate}">
+                    <s:convertDateTime type="both" dateStyle="short"/>
+                </h:outputText>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Finished date</f:facet>
+                <h:outputText value="#{_tasks.finishedDate}">
+                    <s:convertDateTime type="both" dateStyle="short"/>
+                </h:outputText>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Title</f:facet>
+                <h:outputText value="#{_tasks.title}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Description</f:facet>
+                <h:outputText value="#{_tasks.description}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Attachment</f:facet>
+                <h:outputText value="#{_tasks.attachment}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Status</f:facet>
+                <h:outputText value="#{_tasks.status}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Flagged</f:facet>
+                <h:outputText value="#{_tasks.flagged}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Delegated</f:facet>
+                <h:outputText value="#{_tasks.delegated}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Tasks c by tid tid</f:facet>
+                <h:outputText value="#{_tasks.tasksCByTid.tid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Updates tid</f:facet>
+                <h:outputText value="#{_tasks.updates.tid}"/>
+            </h:column>
+            <h:column styleClass="action">
+                <f:facet name="header">Action</f:facet>
+                <s:link id="viewtasks"
+                     value="View"
+                      view="/Tasks.xhtml">
+                    <f:param name="tasksTid"
+                           value="#{_tasks.tid}"/>
+                </s:link>
+            </h:column>
+        </rich:dataTable>
+
+    </div>
+    </rich:tab>
+
+    <rich:tab>
+        <f:facet name="label">
+            <h:panelGroup><h:graphicImage value="/img/manytoone.gif" style="vertical-align: middle; padding-right: 4px;"/>Employee</h:panelGroup>
+        </f:facet>
+    <div class="association" id="employeeParent">
+
+        <h:outputText value="There is no employee associated with this doneBy."
+                   rendered="#{doneByHome.instance.employee == null}"/>
+
+        <rich:dataTable var="_employee"
+                   value="#{doneByHome.instance.employee}"
+                rendered="#{doneByHome.instance.employee != null}"
+              rowClasses="rvgRowOne,rvgRowTwo"
+                      id="employeeTable">
+            <h:column>
+                <f:facet name="header">Eid</f:facet>
+                <h:outputText value="#{_employee.eid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">User name</f:facet>
+                <h:outputText value="#{_employee.userName}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Name</f:facet>
+                <h:outputText value="#{_employee.name}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Job desc</f:facet>
+                <h:outputText value="#{_employee.jobDesc}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Lname</f:facet>
+                <h:outputText value="#{_employee.lname}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Bdate</f:facet>
+                <h:outputText value="#{_employee.bdate}">
+                    <s:convertDateTime type="date" dateStyle="short"/>
+                </h:outputText>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Address</f:facet>
+                <h:outputText value="#{_employee.address}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Email</f:facet>
+                <h:outputText value="#{_employee.email}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Phone num</f:facet>
+                <h:outputText value="#{_employee.phoneNum}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Auth</f:facet>
+                <h:outputText value="#{_employee.auth}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Password</f:facet>
+                <h:outputText value="#{_employee.password}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Late eid</f:facet>
+                <h:outputText value="#{_employee.late.eid}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">On time eid</f:facet>
+                <h:outputText value="#{_employee.onTime.eid}"/>
+            </h:column>
+            <h:column styleClass="action">
+                <f:facet name="header">Action</f:facet>
+                <s:link id="viewemployee"
+                     value="View"
+                      view="/Employee.xhtml">
+                    <f:param name="employeeEid"
+                           value="#{_employee.eid}"/>
+                </s:link>
+            </h:column>
+        </rich:dataTable>
+
+    </div>
+    </rich:tab>
+</rich:tabPanel>
+</ui:define>
+
+</ui:composition>

@@ -1,0 +1,98 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+
+	<h:form>
+
+		<rich:toolBar height="34" itemSeparator="none" width="50%">
+
+			<!-- ReActivate Button  -->
+			<rich:toolBarGroup>
+				<h:commandLink action="#" style="color:Black;text-decoration:none;">
+					<h:graphicImage id="RE-Activate" value="/img/control_play.png" />
+					<a4j:commandLink action="#{tasksActions.ReActivateTasks()}"
+						value="RE-Activate" reRender="tasksTablePanel" for="RE-Activate"
+						style="color:Black;text-decoration:none;" />
+				</h:commandLink>
+			
+
+			<!-- Suspend Button  -->
+			
+				<h:commandLink action="#" style="color:Black;text-decoration:none;">
+					<h:graphicImage id="suspend" value="/img/control_pause.png" />
+					<a4j:commandLink action="#{tasksActions.suspendMarkedTasks()}"
+						value="Suspend" reRender="tasksTablePanel" for="suspend"
+						style="color:Black;text-decoration:none;" />
+				</h:commandLink>
+			
+
+			<!-- Mark As Read Button  -->
+			
+				<h:commandLink action="#" style="color:Black;text-decoration:none;">
+					<h:graphicImage id="maread" value="/img/doc_page.png" />
+					<a4j:commandLink action="#{tasksActions.markAsReadTasks()}"
+						value="Mark As Read" reRender="tasksTablePanel" for="maread"
+						style="color:Black;text-decoration:none;" />
+				</h:commandLink>
+			
+			
+			<!-- Mark As UnRead Button  -->
+			
+				<h:commandLink action="#" style="color:Black;text-decoration:none;">
+					<h:graphicImage id="mauread" value="/img/unRead.png" />
+					<a4j:commandLink action="#{tasksActions.markAsUnReadTasks()}"
+						value="Mark As Un-Read" reRender="tasksTablePanel" for="mauread"
+						style="color:Black;text-decoration:none;" />
+				</h:commandLink>
+			
+
+			<!-- Archive Button  -->
+			
+				<h:commandLink action="#" onclick="alert('Phase B');"
+					style="color:Black;text-decoration:none;" >
+					<h:graphicImage id="archive" value="/img/database.png" />
+					<h:outputLabel value="Archive" for="archive" />
+				</h:commandLink>
+			
+
+			<!-- Unmark All Link -->
+			
+				<h:commandLink action="#" style="color:Black;text-decoration:none;">
+					<h:graphicImage id="unmark" value="/img/unmark.png" />
+					<a4j:commandLink action="#{tasksActions.clearMarkedList()}"
+						value="Unmark All" reRender="tasksTablePanel" style="color:Black;text-decoration:none;" />
+				</h:commandLink>
+			
+
+			<!-- Refresh Button  -->
+			
+				<h:commandLink action="#" style="color:Black;text-decoration:none;">
+					<h:graphicImage id="refresh" value="/img/arrow_refresh.png" />
+					<a4j:commandLink action="#" value="Refresh"
+						onclick="location.reload(true)" for="refresh" style="color:Black;text-decoration:none;" />
+				</h:commandLink>
+			</rich:toolBarGroup>
+			
+			<!-- Identification  -->
+			<rich:toolBarGroup location="right">
+				<h:outputText value="signed in as: #{identity.username}"
+					rendered="#{identity.loggedIn}" />
+				<s:link view="/login.xhtml" action="#{identity.logout}"
+					value="Logout" rendered="#{identity.loggedIn}" propagation="none" />
+			</rich:toolBarGroup>
+
+
+		</rich:toolBar>
+
+	</h:form>
+
+
+</ui:composition>
+
+
+
+

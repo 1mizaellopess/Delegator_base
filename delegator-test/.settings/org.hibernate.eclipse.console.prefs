@@ -1,0 +1,4 @@
+#Sun Sep 13 00:53:38 GMT+02:00 2009
+default.configuration=delegator-ejb
+eclipse.preferences.version=1
+hibernate3.enabled=true

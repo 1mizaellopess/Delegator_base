@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap/deploy
+END
+hsqldb-ds.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap/deploy/hsqldb-ds.xml
+END
+jms-ra.rar
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap/deploy/jms-ra.rar
+END
+ejb3-interceptors-aop.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap/deploy/ejb3-interceptors-aop.xml
+END
+remoting-service.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap/deploy/remoting-service.xml
+END
+jboss-local-jdbc.rar
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap/deploy/jboss-local-jdbc.rar
+END
+jboss-xa-jdbc.rar
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/huji-startup-dropkick/!svn/ver/24/delegator-test/bootstrap/deploy/jboss-xa-jdbc.rar
+END
